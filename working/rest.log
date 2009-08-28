@@ -1,0 +1,8 @@
+RestClient.get "https://my.rightscale.com/api/acct/7954/servers", :x_api_version=>"1.0"
+# => 200 OK | application/xml 8213 bytes
+RestClient.post "https://my.rightscale.com/api/acct/7954/run_script687102/run_script", "right_script=45374", :x_api_version=>"1.0", :content_type=>"application/x-www-form-urlencoded"
+RestClient.post "https://my.rightscale.com/api/acct/7954/run_script/687102/run_script", "right_script=45374", :x_api_version=>"1.0", :content_type=>"application/x-www-form-urlencoded"
+RestClient.post "https://my.rightscale.com/api/acct/7954/servers/687102/run_script", "right_script=45374", :x_api_version=>"1.0", :content_type=>"application/x-www-form-urlencoded"
+# => 201 Created | application/xml 21 bytes
+RestClient.post "https://my.rightscale.com/api/acct/7954/servers/680079/start", "", :x_api_version=>"1.0", :content_type=>"application/x-www-form-urlencoded"
+# => 201 Created | application/xml 21 bytes

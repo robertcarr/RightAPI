@@ -1,0 +1,63 @@
+#!/usr/bin/ruby
+
+##############################################################################
+## RightScale API examples using rest_client ruby gem
+## Robert Carr 08/27/2009 robert@rightscale.com
+## 
+## MORE INFO: 
+## rest_client ruby gem  http://rest-client.heroku.com/rdoc/
+## 
+## RightScale API reference information
+## http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+##
+## BEFORE YOU START:
+## You must call the startAPI with your credentials or passed variables
+## It defaults to a dump of your current list of servers.
+## Uncomment other calls as needed.
+##############################################################################
+
+require 'rubygems'   # not required if ruby >= 1.9
+require 'rest_client'
+
+#####
+## This is not a complete list of api calls: see API reference
+#####
+
+
+class RightAPI
+
+api =	{	:servers		=> "servers" ,
+		:deployments		=> "deployments",
+		:ebs			=> "ec2_ebs_volumes",
+		:snapshots		=> "ec2_ebs_snapshots",
+		:alerts			=> "alert_specs",
+		:eips			=> "ec2_elastic_ips",
+		:securitygroups		=> "ec2_security_groups",
+		:sshkeys		=> "ec2_ssh_keys",
+		:arrays			=> "server_arrays",
+		:s3			=> "s3_buckets",
+		:credentials		=> "credentials",
+		:macros			=> "macros",
+		:servertemplates	=> "server_templates",
+		:rightscripts		=> "right_scripts"
+	}
+	
+	def	login(username, password, account) 
+		@username = username
+		@password = password
+		@account = account
+		RestClient.log = 'rest.log'
+		RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
+	end
+
+	def	show_all_servers
+		# Get /api/acct/1/servers		
+		self[api[:servers]].get :x_api_version => '1.0'
+	end
+
+		
+end
+
+
+
+

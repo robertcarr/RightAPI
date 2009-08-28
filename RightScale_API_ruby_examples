@@ -1,0 +1,136 @@
+#!/usr/bin/ruby
+
+##############################################################################
+## RightScale API examples using rest_client ruby gem
+## Robert Carr 08/27/2009 robert@rightscale.com
+## 
+## MORE INFO: 
+## rest_client ruby gem  http://rest-client.heroku.com/rdoc/
+## 
+## RightScale API reference information
+## http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+##
+## BEFORE YOU START:
+## You must call the startAPI with your credentials or passed variables
+## It defaults to a dump of your current list of servers.
+## Uncomment other calls as needed.
+##############################################################################
+
+require 'rubygems'   # not required if ruby >= 1.9
+require 'rest_client'
+
+#####
+## This is not a complete list of api calls: see API reference
+#####
+
+api =	{	:servers		=> "servers" ,
+		:deployments		=> "deployments",
+		:ebs			=> "ec2_ebs_volumes",
+		:snapshots		=> "ec2_ebs_snapshots",
+		:alerts			=> "alert_specs",
+		:eips			=> "ec2_elastic_ips",
+		:securitygroups		=> "ec2_security_groups",
+		:sshkeys		=> "ec2_ssh_keys",
+		:arrays			=> "server_arrays",
+		:s3			=> "s3_buckets",
+		:credentials		=> "credentials",
+		:macros			=> "macros",
+		:servertemplates	=> "server_templates",
+		:rightscripts		=> "right_scripts",
+		:runscript		=> "run_script"
+	}
+
+
+def	startAPI(username, password, account) 
+	@username = username
+	@password = password
+	@account = account
+	RestClient.log = 'rest.log'
+	rsAPI = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
+end
+
+#####
+## Begin by creating the API handle
+#####
+
+# Method 1: pass variables
+#username=''
+#password=''
+#account=''
+
+if ! defined? username then
+	puts "You must define user credentials first!"
+	exit
+end
+
+rsapi = startAPI(username,password,account) 
+
+# Method 2: pass strings
+#rsapi = startAPI('username','password','account')
+
+#############################################################
+## Continue by passing calls as needed/
+## Below are some example calls for various actions.
+## Uncomment the required info to activate.
+## Activate only one function at time.
+#############################################################
+
+# Show all servers
+# URL: GET /api/acct/1/servers
+data = rsapi[api[:servers]].get :x_api_version => '1.0'
+
+# Show individual servers
+# URL: GET /api/acct/1/servers/1.xml
+#server = serverid#
+#data = rsapi[api[:servers]+"/#{server}"].get :x_api_version => '1.0'
+
+# Update Server Nickname
+# PUT /api/acct/1/servers/1
+
+#params = { "server[nickname]" => "NEW SERVER NAME" }
+#server = 132456
+#data = rsapi[api[:servers]+"/#{server}"].put params, :x_api_version => '1.0'
+
+# Create and EBS volume
+# URL: POST /api/acct/1/ec2_ebs_volumes
+
+#params = {     "ec2_ebs_volume[nickname]"			=> "EBS_NICKNAME",
+#               "ec2_ebs_volume[description]"			=> "EBS_DESCRIPTION",
+#               "ec2_ebs_volume[ec2_availability_zone]" 		=> "us-east-1a",
+#               "e2c2_ebs_volume[aws_size]" 			=> "1"
+#       }                                        
+
+#data = rsapi[api[:ebs]].post params, :x_api_version => '1.0'
+
+# Delete EBS Volume
+# URL:  DELETE /api/acct/1/ec2_ebs_volumes/1 
+#volume=12345
+#data = rsapi[api[:ebs]+"/#{volume}"].delete :x_api_version => '1.0'
+
+# Run RightScript against a server
+# URL: POST /api/acct/1/servers/000/run_script
+#server=
+#params = { "right_script"	=> '1234' }
+#data = rsapi[api[:servers]+"/#{server}/run_script"].post params, :x_api_version => '1.0'
+
+# Start a server
+# URL: POST /api/acct/1/servers/000/start
+#params = {} # pass empty hash
+#server = 1234567
+data = rsapi[api[:servers]+"/#{server}/start"].post params, :x_api_version => '1.0'
+
+
+###
+### Dump to console the API results
+###
+
+if data.code == 200
+	puts "API call successful: Code 200 OK received" 
+end
+
+if defined? data then
+	 puts data.inspect
+end
+
+
+

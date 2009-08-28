@@ -1,0 +1,9 @@
+#!/usr/bin/ruby
+#
+
+require '/home/rob/API/RightAPI'
+
+api = RightAPI.new
+api.login(username,password,account)
+puts api.servers_show_all
+

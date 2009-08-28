@@ -1,0 +1,2861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployments type="array">
+  <deployment>
+    <created-at type="datetime">2008-08-01T17:09:32Z</created-at>
+    <description>General deployment for testing and debugging, and to run individual servers.</description>
+    <nickname>Default</nickname>
+    <updated-at type="datetime">2009-01-14T21:40:48Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/8809</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-01-13T22:35:30Z</created-at>
+        <nickname>'nilla</nickname>
+        <updated-at type="datetime">2009-03-31T22:28:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/642846</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-31T12:59:44Z</created-at>
+        <nickname>AP: Windows 2003R2_from_bundle_test_new_Dash</nickname>
+        <updated-at type="datetime">2009-07-31T14:14:13Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/684710</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-13T18:51:19Z</created-at>
+        <nickname>ApacheWebServer</nickname>
+        <updated-at type="datetime">2009-08-13T21:05:18Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688123</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-21T16:29:46Z</created-at>
+        <nickname>BA: LAMP v4 developer - experiment</nickname>
+        <updated-at type="datetime">2009-08-18T00:27:45Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682481</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T20:19:46Z</created-at>
+        <nickname>BA: LAMP v4 developer - small</nickname>
+        <updated-at type="datetime">2009-06-22T20:28:26Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677395</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-14T00:10:18Z</created-at>
+        <nickname>badler apache webserver</nickname>
+        <updated-at type="datetime">2009-05-14T00:35:33Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/669030</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-09T22:26:12Z</created-at>
+        <nickname>BitNami.org Django</nickname>
+        <updated-at type="datetime">2009-06-09T23:11:02Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/674663</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-19T21:29:09Z</created-at>
+        <nickname>CF: FreeSwitch Server Build Box</nickname>
+        <updated-at type="datetime">2009-03-19T21:34:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/654417</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-24T18:30:06Z</created-at>
+        <nickname>CF: FreeSwitch Server Build Box v1</nickname>
+        <updated-at type="datetime">2009-03-24T20:33:24Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/655188</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-02T16:06:01Z</created-at>
+        <nickname>Cohesive FT VPN Cubed Manager (EU)</nickname>
+        <updated-at type="datetime">2009-07-02T16:06:01Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679676</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-20T19:18:01Z</created-at>
+        <nickname>DS-Php bug test</nickname>
+        <updated-at type="datetime">2009-03-20T20:15:11Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/654579</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-23T16:49:20Z</created-at>
+        <nickname>DS-Tarsin Demo</nickname>
+        <updated-at type="datetime">2009-04-23T17:21:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/660358</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-12T19:06:05Z</created-at>
+        <nickname>DS: Plain Image</nickname>
+        <updated-at type="datetime">2009-04-23T18:45:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/653087</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-13T23:27:06Z</created-at>
+        <nickname>DS:EssentialTalk Demo</nickname>
+        <updated-at type="datetime">2009-06-14T02:45:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/675507</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-03T21:05:34Z</created-at>
+        <nickname>DS:LAMP v4 trial v0.2</nickname>
+        <updated-at type="datetime">2009-06-10T00:09:02Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/673433</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-23T21:40:06Z</created-at>
+        <nickname>DS:Magic Ubuntu Server</nickname>
+        <updated-at type="datetime">2009-02-23T21:56:37Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/649962</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-23T21:51:56Z</created-at>
+        <nickname>DS:Newbuntu</nickname>
+        <updated-at type="datetime">2009-02-23T22:00:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/649981</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-05-11T21:45:59Z</created-at>
+        <nickname>f</nickname>
+        <updated-at type="datetime">2009-05-28T22:23:24Z</updated-at>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-03-12T17:52:12Z</created-at>
+        <nickname>HP: GoGrid Test v1</nickname>
+        <updated-at type="datetime">2009-03-12T18:03:41Z</updated-at>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-08T22:21:41Z</created-at>
+        <nickname>HP: JasperServer Pro 3.5 - Vertica</nickname>
+        <updated-at type="datetime">2009-06-09T00:15:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/674330</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-26T19:35:20Z</created-at>
+        <nickname>HP: Test RightScalized Image</nickname>
+        <updated-at type="datetime">2009-02-28T02:10:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/650548</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-10T18:27:58Z</created-at>
+        <nickname>HP: VPN Cubed Manager</nickname>
+        <updated-at type="datetime">2009-06-10T19:07:19Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/674865</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-21T23:35:33Z</created-at>
+        <nickname>HP: VPN Gateway</nickname>
+        <updated-at type="datetime">2009-07-21T23:35:33Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682638</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-17T15:33:00Z</created-at>
+        <nickname>HP: Windoze</nickname>
+        <updated-at type="datetime">2009-07-30T23:39:30Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/681947</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-30T22:29:36Z</created-at>
+        <nickname>Hyperic Server</nickname>
+        <updated-at type="datetime">2009-04-30T23:48:20Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661613</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-19T23:53:48Z</created-at>
+        <nickname>IBM DB2 Express-C (Ubuntu)</nickname>
+        <updated-at type="datetime">2009-06-19T23:59:14Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677140</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-14T22:01:48Z</created-at>
+        <nickname>LB Apache+HAproxy v4</nickname>
+        <updated-at type="datetime">2009-04-14T22:01:48Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658893</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-13T21:16:09Z</created-at>
+        <nickname>MC - Learning</nickname>
+        <updated-at type="datetime">2009-08-13T21:16:09Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688184</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-13T21:23:42Z</created-at>
+        <nickname>MC - Learning</nickname>
+        <updated-at type="datetime">2009-08-13T23:42:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688186</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-19T17:50:43Z</created-at>
+        <nickname>MC - Learning V2</nickname>
+        <updated-at type="datetime">2009-08-19T18:33:32Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688940</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-30T19:01:42Z</created-at>
+        <nickname>MySQL EBS</nickname>
+        <updated-at type="datetime">2009-01-30T19:01:42Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/645680</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-18T04:11:40Z</created-at>
+        <nickname>NC FTP</nickname>
+        <updated-at type="datetime">2009-02-18T18:49:09Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/648873</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-28T21:43:59Z</created-at>
+        <nickname>NC: M+G v.01 v1</nickname>
+        <updated-at type="datetime">2009-04-30T19:10:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661075</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-19T00:35:45Z</created-at>
+        <nickname>NC: syslog</nickname>
+        <updated-at type="datetime">2008-12-19T19:57:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/640376</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-20T21:37:33Z</created-at>
+        <nickname>NFS Server Master v1 (EU)</nickname>
+        <updated-at type="datetime">2009-02-21T00:00:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/649439</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T16:29:19Z</created-at>
+        <nickname>php </nickname>
+        <updated-at type="datetime">2009-02-05T00:11:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646186</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-01T16:18:51Z</created-at>
+        <nickname>Rails all-in-one-developer v8</nickname>
+        <updated-at type="datetime">2009-06-01T16:18:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/672913</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-18T22:32:00Z</created-at>
+        <nickname>Rails-Passenger FrontEnd v1 (Ubuntu Beta)</nickname>
+        <updated-at type="datetime">2009-08-21T17:59:45Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688849</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-05T22:33:41Z</created-at>
+        <nickname>RC: Animoto Test2</nickname>
+        <updated-at type="datetime">2009-03-05T22:33:41Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/651669</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-02T17:07:31Z</created-at>
+        <nickname>RC: Rails XL Test</nickname>
+        <updated-at type="datetime">2009-03-02T17:14:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/650964</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-11T22:24:12Z</created-at>
+        <nickname>REC: Test</nickname>
+        <updated-at type="datetime">2009-04-22T20:39:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/652943</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-13T21:58:18Z</created-at>
+        <nickname>rs-test</nickname>
+        <updated-at type="datetime">2009-03-13T02:36:37Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/642840</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-27T22:40:07Z</created-at>
+        <nickname>Ryan : Chef</nickname>
+        <updated-at type="datetime">2009-07-27T22:40:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683730</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T20:29:25Z</created-at>
+        <nickname>Ryan MySQL Additional v13.1</nickname>
+        <updated-at type="datetime">2009-06-22T20:37:42Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677399</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-25T19:51:56Z</created-at>
+        <nickname>SAVE!!! HP: Test RightScalized Image</nickname>
+        <updated-at type="datetime">2009-02-27T21:57:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/650404</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-11T22:28:19Z</created-at>
+        <nickname>SPLUNK Indexer</nickname>
+        <updated-at type="datetime">2009-02-11T22:53:26Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/647951</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:15:42Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-07-01T21:00:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679396</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-12T23:01:42Z</created-at>
+        <nickname>test ssh</nickname>
+        <updated-at type="datetime">2009-05-20T05:46:37Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/667548</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-14T19:27:47Z</created-at>
+        <nickname>The Comedy Couch</nickname>
+        <updated-at type="datetime">2009-04-21T16:50:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/643004</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-20T20:24:44Z</created-at>
+        <nickname>tomcat test</nickname>
+        <updated-at type="datetime">2009-01-26T22:52:45Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/643884</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-27T17:24:46Z</created-at>
+        <nickname>UIF 2</nickname>
+        <updated-at type="datetime">2009-03-28T03:31:38Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/655986</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-27T19:06:52Z</created-at>
+        <nickname>Windozing on the couch</nickname>
+        <updated-at type="datetime">2009-04-17T18:22:38Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/645152</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/8809</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-09-03T01:50:11Z</created-at>
+    <description>Master Slave Failover for vBulletin</description>
+    <nickname>HP: Production - vBulletin</nickname>
+    <updated-at type="datetime">2009-04-10T17:33:47Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/9628</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-20T19:47:39Z</created-at>
+        <nickname>DBSCLIENT</nickname>
+        <updated-at type="datetime">2009-07-21T23:16:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682276</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-20T17:25:30Z</created-at>
+        <nickname>DBSS0001</nickname>
+        <updated-at type="datetime">2009-07-21T23:16:26Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682211</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-20T20:22:09Z</created-at>
+        <nickname>DBSS0002</nickname>
+        <updated-at type="datetime">2009-07-21T23:13:31Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682285</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-27T17:46:06Z</created-at>
+        <nickname>EBS Grown Master - collectd 4.6.2 mysql patch</nickname>
+        <updated-at type="datetime">2009-08-25T13:32:13Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/645129</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-27T17:46:06Z</created-at>
+        <nickname>EBS Grown Master - collectd 4.6.2 mysql patch-all-updates</nickname>
+        <updated-at type="datetime">2009-08-25T09:32:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688902</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-27T19:07:31Z</created-at>
+        <nickname>EBS New Grown Slave</nickname>
+        <updated-at type="datetime">2009-03-26T16:31:09Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/645153</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-27T01:40:34Z</created-at>
+        <nickname>HP: FE2 no HAPROXY with Reverse Proxy</nickname>
+        <updated-at type="datetime">2009-03-31T20:44:40Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/655848</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-16T17:15:38Z</created-at>
+        <nickname>HP: MySQL Toolbox</nickname>
+        <updated-at type="datetime">2009-03-16T19:05:18Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/653548</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-18T10:40:20Z</created-at>
+        <nickname>MySQL Enterprise Service Manager</nickname>
+        <updated-at type="datetime">2009-08-25T13:14:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688725</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-03T01:51:10Z</created-at>
+        <nickname>MySQL Master</nickname>
+        <updated-at type="datetime">2009-07-23T19:07:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/627573</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-03T01:51:58Z</created-at>
+        <nickname>MySQL Slave</nickname>
+        <updated-at type="datetime">2008-11-25T19:20:41Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/627574</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-03T01:51:58Z</created-at>
+        <nickname>MySQL Slave2</nickname>
+        <updated-at type="datetime">2008-10-08T18:13:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/630651</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-03T01:51:10Z</created-at>
+        <nickname>MySQL XTRALG Master v2</nickname>
+        <updated-at type="datetime">2009-04-11T04:30:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646256</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-03T01:51:10Z</created-at>
+        <nickname>MySQL XTRALG Slave</nickname>
+        <updated-at type="datetime">2009-02-04T00:09:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646262</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-27T01:38:19Z</created-at>
+        <nickname>test php server</nickname>
+        <updated-at type="datetime">2009-03-27T01:38:19Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/655847</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-19T20:44:23Z</created-at>
+        <nickname>Ubuntu Master</nickname>
+        <updated-at type="datetime">2009-05-19T23:17:22Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670132</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-19T20:59:58Z</created-at>
+        <nickname>Ubuntu Slave</nickname>
+        <updated-at type="datetime">2009-05-19T23:17:22Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670141</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE1</nickname>
+        <updated-at type="datetime">2009-08-13T00:42:58Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/629577</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE1 Large</nickname>
+        <updated-at type="datetime">2009-04-11T04:30:12Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/638477</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE1 SSL</nickname>
+        <updated-at type="datetime">2009-04-23T18:05:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/649490</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE1 SSL Newer Templates</nickname>
+        <updated-at type="datetime">2009-06-15T16:34:40Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/675686</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE2</nickname>
+        <updated-at type="datetime">2009-08-21T00:36:58Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/629588</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/9628</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-10-16T23:03:15Z</created-at>
+    <description>A single LAMP vBulletin server</description>
+    <nickname>HP: Production - vBulletin LAMP</nickname>
+    <updated-at type="datetime">2009-02-18T21:14:28Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/11039</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-18T21:10:40Z</created-at>
+        <nickname>HP: BareBones wEBS Backups</nickname>
+        <updated-at type="datetime">2009-02-18T22:34:16Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/648995</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/11039</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-10-29T03:21:30Z</created-at>
+        <nickname>HP: vBulletin</nickname>
+        <updated-at type="datetime">2009-02-18T21:06:45Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/633800</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/11039</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-12-10T18:24:05Z</created-at>
+    <description>Production VoIP/FTP/LDAP servers for RightScale.  DO NOT MESS.</description>
+    <nickname>CF: Production - PBX</nickname>
+    <updated-at type="datetime">2009-05-12T16:15:55Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/12797</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2008-12-11T03:53:16Z</created-at>
+        <nickname>CF: FreeSwitch Server</nickname>
+        <updated-at type="datetime">2009-05-01T18:28:32Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/638905</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12797</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-12-11T23:31:58Z</created-at>
+    <description>Please Save
+- Before removing contact robert@rightscale.com</description>
+    <nickname>RC: Lab</nickname>
+    <updated-at type="datetime">2009-08-24T23:10:30Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/12869</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-06T16:24:38Z</created-at>
+        <nickname>RC: Ubuntu Vanilla</nickname>
+        <updated-at type="datetime">2009-08-10T23:33:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/680079</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12869</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T16:10:48Z</created-at>
+        <nickname>RC: Vanilla CentOS</nickname>
+        <updated-at type="datetime">2009-08-07T13:45:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682713</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12869</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-10T17:15:37Z</created-at>
+        <nickname>SERVICES: Community Sandbox ( Free4All)</nickname>
+        <updated-at type="datetime">2009-08-18T23:12:16Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/687102</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12869</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-12-12T17:48:41Z</created-at>
+    <description></description>
+    <nickname>DW: Dev</nickname>
+    <updated-at type="datetime">2008-12-18T19:18:01Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/12898</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2008-12-14T22:05:51Z</created-at>
+        <nickname>DW: Build</nickname>
+        <updated-at type="datetime">2009-01-06T01:31:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/639503</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12898</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-12T18:52:42Z</created-at>
+        <nickname>DW: Dev</nickname>
+        <updated-at type="datetime">2009-01-22T19:29:23Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/639415</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12898</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-12-12T22:36:15Z</created-at>
+    <description>A deployment to test and document Novell solutions</description>
+    <nickname>NC: Novell</nickname>
+    <updated-at type="datetime">2009-03-25T15:35:35Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/12913</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-03-12T23:03:38Z</created-at>
+        <nickname>NC: M+G v.01</nickname>
+        <updated-at type="datetime">2009-03-25T15:34:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/653147</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-12T22:44:31Z</created-at>
+        <nickname>NC: Novell eDir</nickname>
+        <updated-at type="datetime">2009-03-12T23:51:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/639434</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-12T22:44:31Z</created-at>
+        <nickname>NC: Novell eDir v2</nickname>
+        <updated-at type="datetime">2009-03-11T21:46:40Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/652929</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-24T18:49:24Z</created-at>
+        <nickname>PHP FrontEnd v7</nickname>
+        <updated-at type="datetime">2009-04-01T16:57:58Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/640942</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/12913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-12-30T18:48:20Z</created-at>
+    <description></description>
+    <nickname>NC Splunk</nickname>
+    <updated-at type="datetime">2008-12-30T18:48:20Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/13509</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-01-06T00:38:19Z</created-at>
+        <nickname>NC Splunk Reciever 2</nickname>
+        <updated-at type="datetime">2009-03-12T16:29:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/641767</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-30T18:55:07Z</created-at>
+        <nickname>Splunk Receiver</nickname>
+        <updated-at type="datetime">2009-01-02T17:49:16Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/641290</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-01-06T00:40:34Z</created-at>
+    <description></description>
+    <nickname>HP: Splunk</nickname>
+    <updated-at type="datetime">2009-02-18T00:58:49Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/13690</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-01-06T00:40:57Z</created-at>
+        <nickname>Splunk Receiver</nickname>
+        <updated-at type="datetime">2009-03-03T16:48:36Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/641769</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13690</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-06T00:40:57Z</created-at>
+        <nickname>Splunk Receiver v2</nickname>
+        <updated-at type="datetime">2009-02-18T19:56:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/648977</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13690</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-01-06T22:06:45Z</created-at>
+    <description></description>
+    <nickname>RS: Testing</nickname>
+    <updated-at type="datetime">2009-04-14T04:26:15Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/13738</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-05-20T16:24:30Z</created-at>
+        <nickname>FE1</nickname>
+        <updated-at type="datetime">2009-05-20T16:33:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670445</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13738</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-20T16:32:43Z</created-at>
+        <nickname>FE2</nickname>
+        <updated-at type="datetime">2009-05-20T16:32:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670448</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13738</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-04T06:08:59Z</created-at>
+        <nickname>rs-nginx</nickname>
+        <updated-at type="datetime">2009-04-11T05:51:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/657451</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13738</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-13T21:06:10Z</created-at>
+        <nickname>rs-test</nickname>
+        <updated-at type="datetime">2009-06-26T22:43:30Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658662</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/13738</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-01-22T22:55:17Z</created-at>
+    <description nil="true"></description>
+    <nickname>APIGEN</nickname>
+    <updated-at type="datetime">2009-01-22T22:55:17Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/14392</href>
+    <servers type="array"/>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-01-26T17:49:22Z</created-at>
+    <description></description>
+    <nickname>Macro</nickname>
+    <updated-at type="datetime">2009-01-26T17:49:24Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/14518</href>
+    <servers type="array"/>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-02-02T23:49:29Z</created-at>
+    <description></description>
+    <nickname>CF - Build - PBX</nickname>
+    <updated-at type="datetime">2009-03-20T18:31:57Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/14854</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-02T23:51:58Z</created-at>
+        <nickname>CF: FreeSwitch Build</nickname>
+        <updated-at type="datetime">2009-08-19T21:37:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646060</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14854</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-09-03T01:50:11Z</created-at>
+    <description>Master Slave Failover for vBulletin</description>
+    <nickname>HP: EU</nickname>
+    <updated-at type="datetime">2009-06-18T15:36:15Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/14913</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T17:56:25Z</created-at>
+        <nickname>EBS EU Master</nickname>
+        <updated-at type="datetime">2009-02-20T23:09:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646213</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T17:56:25Z</created-at>
+        <nickname>EBS EU Slave</nickname>
+        <updated-at type="datetime">2009-02-05T17:21:23Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646215</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-05T17:15:18Z</created-at>
+        <nickname>EU FE 1</nickname>
+        <updated-at type="datetime">2009-02-23T23:26:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646637</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T19:04:51Z</created-at>
+        <nickname>EU S3 MASTER</nickname>
+        <updated-at type="datetime">2009-02-04T00:04:30Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646232</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-17T15:38:25Z</created-at>
+        <nickname>HP: Windows EU</nickname>
+        <updated-at type="datetime">2009-07-23T20:40:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/681949</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14913</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-02-03T22:54:20Z</created-at>
+    <description></description>
+    <nickname>NC: test bucket</nickname>
+    <updated-at type="datetime">2009-04-30T15:33:17Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/14933</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-04-30T15:34:16Z</created-at>
+        <nickname>DW: Vanilla</nickname>
+        <updated-at type="datetime">2009-06-23T23:31:30Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661497</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-02T21:09:08Z</created-at>
+        <nickname>KEEP : PHP UCC test</nickname>
+        <updated-at type="datetime">2009-06-10T21:11:36Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/673195</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-27T19:45:23Z</created-at>
+        <nickname>LB Apache+HAproxy v4</nickname>
+        <updated-at type="datetime">2009-03-11T19:10:44Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/650693</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-19T17:05:50Z</created-at>
+        <nickname>NC KEEP, freeswitch call from email v2</nickname>
+        <updated-at type="datetime">2009-04-29T22:19:35Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661103</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T22:56:58Z</created-at>
+        <nickname>nc stress</nickname>
+        <updated-at type="datetime">2009-04-27T18:14:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646277</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-25T19:54:39Z</created-at>
+        <nickname>NC test removal of spec</nickname>
+        <updated-at type="datetime">2009-02-25T22:23:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/650405</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-19T17:05:50Z</created-at>
+        <nickname>NC Vanilla</nickname>
+        <updated-at type="datetime">2009-06-15T20:08:15Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/649150</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-07T00:22:36Z</created-at>
+        <nickname>NC: M+G v.01</nickname>
+        <updated-at type="datetime">2009-03-07T02:08:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/651974</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-05T17:06:44Z</created-at>
+        <nickname>NC: test bundle</nickname>
+        <updated-at type="datetime">2009-02-06T16:19:14Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646634</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-06T18:45:51Z</created-at>
+        <nickname>PHP FrontEnd bla</nickname>
+        <updated-at type="datetime">2009-02-07T00:43:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646861</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-18T23:22:45Z</created-at>
+        <nickname>PHP FrontEnd v7</nickname>
+        <updated-at type="datetime">2009-06-18T23:24:15Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/676879</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-24T20:36:26Z</created-at>
+        <nickname>Rails all-in-one-developer v8</nickname>
+        <updated-at type="datetime">2009-04-24T23:21:12Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/660568</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-12T17:12:32Z</created-at>
+        <nickname>test eu bundle</nickname>
+        <updated-at type="datetime">2009-02-13T18:51:16Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/648130</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-30T23:11:51Z</created-at>
+        <nickname>testing attachment rev</nickname>
+        <updated-at type="datetime">2009-03-30T23:46:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/656473</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-09T23:23:11Z</created-at>
+        <nickname>UCC PHP App Server v7 (Ubuntu) v0.1</nickname>
+        <updated-at type="datetime">2009-06-10T00:23:14Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/674682</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/14933</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-02-05T01:02:47Z</created-at>
+    <description></description>
+    <nickname>RightGrid Demo App</nickname>
+    <updated-at type="datetime">2009-02-05T01:14:37Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/15003</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-05T01:02:52Z</created-at>
+        <nickname>Job Coordinator</nickname>
+        <updated-at type="datetime">2009-02-24T00:08:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646541</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/15003</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-02-05T20:02:59Z</created-at>
+    <description>DB2 Based Deployment</description>
+    <nickname>HP: DB2</nickname>
+    <updated-at type="datetime">2009-02-05T20:06:22Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/15048</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-05T20:03:38Z</created-at>
+        <nickname>HP DB2 Express-C 9.5 Base</nickname>
+        <updated-at type="datetime">2009-02-06T22:41:22Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646675</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/15048</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-06T21:24:44Z</created-at>
+        <nickname>HP DB2 Express-C 9.5 EBS</nickname>
+        <updated-at type="datetime">2009-02-07T19:47:34Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/646897</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/15048</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-19T23:58:54Z</created-at>
+        <nickname>HP: DB2 Ubuntu</nickname>
+        <updated-at type="datetime">2009-06-24T22:45:44Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677143</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/15048</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-02-11T01:22:29Z</created-at>
+    <description></description>
+    <nickname>HP: Wowza</nickname>
+    <updated-at type="datetime">2009-06-18T15:36:38Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/15320</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-02-11T01:26:02Z</created-at>
+        <nickname>HP Wowza</nickname>
+        <updated-at type="datetime">2009-02-11T19:02:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/647744</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/15320</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-03-10T16:34:11Z</created-at>
+    <description></description>
+    <nickname>Ryan - Test</nickname>
+    <updated-at type="datetime">2009-06-29T16:57:20Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/16699</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-03-11T05:24:25Z</created-at>
+        <nickname>apitest</nickname>
+        <updated-at type="datetime">2009-08-13T18:45:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/687181</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-27T17:36:20Z</created-at>
+        <nickname>proof</nickname>
+        <updated-at type="datetime">2009-06-02T18:26:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/660831</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-24T23:13:27Z</created-at>
+        <nickname>RS SERVER NAME TEST 1</nickname>
+        <updated-at type="datetime">2009-08-24T23:59:26Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689527</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-24T23:13:27Z</created-at>
+        <nickname>RS SERVER NAME TEST 2</nickname>
+        <updated-at type="datetime">2009-08-24T23:59:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689531</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-11T05:24:25Z</created-at>
+        <nickname>Ryan - Vanilla</nickname>
+        <updated-at type="datetime">2009-08-17T21:53:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/652694</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-11T05:24:25Z</created-at>
+        <nickname>Ryan - Vanilla v1</nickname>
+        <updated-at type="datetime">2009-08-17T22:38:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/684306</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-27T22:41:02Z</created-at>
+        <nickname>Ryan : Chef</nickname>
+        <updated-at type="datetime">2009-07-29T17:32:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683732</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-08T17:00:55Z</created-at>
+        <nickname>Ryan : LB Apache+HAproxy v5 (Ubuntu Beta)</nickname>
+        <updated-at type="datetime">2009-07-22T23:32:58Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658027</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T21:19:50Z</created-at>
+        <nickname>Ryan : LB Apache+HAproxy v5 (Ubuntu)</nickname>
+        <updated-at type="datetime">2009-07-22T21:19:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682820</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-09T18:27:47Z</created-at>
+        <nickname>Ryan : MySQL EBS iFixit test</nickname>
+        <updated-at type="datetime">2009-07-29T17:32:59Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683904</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-09T18:27:47Z</created-at>
+        <nickname>Ryan : MySQL EBS Master</nickname>
+        <updated-at type="datetime">2009-08-18T22:02:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658237</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-04-09T18:27:47Z</created-at>
+        <nickname>Ryan : MySQL EBS Slave</nickname>
+        <updated-at type="datetime">2009-06-29T17:15:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662685</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-27T17:04:28Z</created-at>
+        <nickname>Ryan : TomCat5 FrontEnd v6. .10</nickname>
+        <updated-at type="datetime">2009-07-27T18:43:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683624</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-27T17:04:28Z</created-at>
+        <nickname>Ryan : TomCat5 FrontEnd v6.1 .20</nickname>
+        <updated-at type="datetime">2009-07-27T18:43:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683645</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-27T17:04:03Z</created-at>
+        <nickname>Ryan : TomCat6 FrontEnd v2.1 .10</nickname>
+        <updated-at type="datetime">2009-07-29T17:14:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683622</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T20:26:02Z</created-at>
+        <nickname>Ryan MySQL Additional v13.1</nickname>
+        <updated-at type="datetime">2009-06-22T20:26:02Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677397</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/16699</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-03-16T19:12:39Z</created-at>
+    <description></description>
+    <nickname>HP: Hadoop</nickname>
+    <updated-at type="datetime">2009-06-29T20:30:58Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/17007</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-06-29T16:52:02Z</created-at>
+        <nickname>Hadoop Job Tracker</nickname>
+        <updated-at type="datetime">2009-06-29T20:32:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/678971</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17007</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-29T16:54:41Z</created-at>
+        <nickname>Hadoop Namenode</nickname>
+        <updated-at type="datetime">2009-06-29T20:32:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/678973</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17007</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-29T16:52:47Z</created-at>
+        <nickname>Hadoop Slave</nickname>
+        <updated-at type="datetime">2009-06-29T20:32:40Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/678972</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17007</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-03-31T00:39:08Z</created-at>
+    <description>A sandbox for sonymusic e-commerce site</description>
+    <nickname>HP: sonymusic</nickname>
+    <updated-at type="datetime">2009-07-22T17:39:10Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/17886</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-03-31T00:49:25Z</created-at>
+        <nickname>HP: VPN Client (Array)</nickname>
+        <updated-at type="datetime">2009-07-22T19:01:36Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/656499</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17886</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-31T00:49:25Z</created-at>
+        <nickname>HP: VPN Client (Array) 2</nickname>
+        <updated-at type="datetime">2009-04-01T17:05:14Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/656698</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17886</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-31T20:45:41Z</created-at>
+        <nickname>HP: VPN Gateway</nickname>
+        <updated-at type="datetime">2009-07-22T19:01:36Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/656672</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17886</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T16:22:12Z</created-at>
+        <nickname>VPN ServerNew</nickname>
+        <updated-at type="datetime">2009-07-23T19:07:24Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682714</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/17886</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-09-03T01:50:11Z</created-at>
+    <description>Master Slave Failover for vBulletin</description>
+    <nickname>HP: Hyperic</nickname>
+    <updated-at type="datetime">2009-05-12T20:40:04Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/18269</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-04-06T21:01:20Z</created-at>
+        <nickname>HP: Hyperic Server v2</nickname>
+        <updated-at type="datetime">2009-05-12T20:09:41Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/657725</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18269</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-12T20:10:46Z</created-at>
+        <nickname>HQE Server w/local MySQL backend</nickname>
+        <updated-at type="datetime">2009-05-20T05:48:37Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/666716</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18269</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE1</nickname>
+        <updated-at type="datetime">2009-05-13T00:28:09Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/657720</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18269</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-09-22T21:46:30Z</created-at>
+        <nickname>vBulletin FE2</nickname>
+        <updated-at type="datetime">2009-04-06T20:54:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/657723</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18269</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2008-08-01T17:09:32Z</created-at>
+    <description>General deployment for testing and debugging, and to run individual servers.</description>
+    <nickname>New Cloned Default</nickname>
+    <updated-at type="datetime">2009-04-10T17:35:22Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/18509</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-01-13T22:35:30Z</created-at>
+        <nickname>'nilla</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658380</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-19T21:29:09Z</created-at>
+        <nickname>CF: FreeSwitch Server Build Box</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:47Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658381</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-24T18:30:06Z</created-at>
+        <nickname>CF: FreeSwitch Server Build Box v1</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:48Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658382</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-20T19:18:01Z</created-at>
+        <nickname>DS-Php bug test</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658383</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-12T19:06:05Z</created-at>
+        <nickname>DS: Plain Image</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658384</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-23T21:40:06Z</created-at>
+        <nickname>DS:Magic Ubuntu Server</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658385</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-23T21:51:56Z</created-at>
+        <nickname>DS:Newbuntu</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:51Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658386</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-03-12T17:52:12Z</created-at>
+        <nickname>HP: GoGrid Test v1</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:52Z</updated-at>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-26T19:35:20Z</created-at>
+        <nickname>HP: Test RightScalized Image</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658388</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-30T19:01:42Z</created-at>
+        <nickname>MySQL EBS</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:53Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658389</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-18T04:11:40Z</created-at>
+        <nickname>NC FTP</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658390</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2008-12-19T00:35:45Z</created-at>
+        <nickname>NC: syslog</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:55Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658391</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-20T21:37:33Z</created-at>
+        <nickname>NFS Server Master v1 (EU)</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:55Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658392</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-03T16:29:19Z</created-at>
+        <nickname>php </nickname>
+        <updated-at type="datetime">2009-04-10T17:34:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658393</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-05T22:33:41Z</created-at>
+        <nickname>RC: Animoto Test2</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658394</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-02T17:07:31Z</created-at>
+        <nickname>RC: Rails XL Test</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:58Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658395</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-11T22:24:12Z</created-at>
+        <nickname>REC: Test Apache Template</nickname>
+        <updated-at type="datetime">2009-04-10T17:34:59Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658396</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-13T21:58:18Z</created-at>
+        <nickname>rs-test</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:00Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658397</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-25T19:51:56Z</created-at>
+        <nickname>SAVE!!! HP: Test RightScalized Image</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:00Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658398</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-02-11T22:28:19Z</created-at>
+        <nickname>SPLUNK Indexer</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:01Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658399</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-20T20:24:44Z</created-at>
+        <nickname>tomcat test</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:02Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658400</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-14T19:27:47Z</created-at>
+        <nickname>ubuntu is fundamental</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658401</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-03-27T17:24:46Z</created-at>
+        <nickname>UIF 2</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:04Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658402</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-01-27T19:06:52Z</created-at>
+        <nickname>Windozing on the couch</nickname>
+        <updated-at type="datetime">2009-04-10T17:35:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/658403</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/18509</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-04-28T23:29:07Z</created-at>
+    <description>The is the deployment for the Sys Admin monitoring and tools.  Don't touch it unless you are supposed to touch it.</description>
+    <nickname>System Administration</nickname>
+    <updated-at type="datetime">2009-04-28T23:29:07Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/19519</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-04-28T23:55:23Z</created-at>
+        <nickname>Sys Admin Monitoring</nickname>
+        <updated-at type="datetime">2009-06-01T23:08:17Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661111</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19519</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-01T17:04:01Z</created-at>
+        <nickname>SysAdmin MySQL EBS Master</nickname>
+        <updated-at type="datetime">2009-05-05T04:17:23Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661764</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19519</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-04-29T16:37:18Z</created-at>
+    <description>A set of templates to test performance</description>
+    <nickname>HP: Perf. Testing</nickname>
+    <updated-at type="datetime">2009-04-29T16:37:18Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/19586</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-04-29T16:41:56Z</created-at>
+        <nickname>Perf Test v1</nickname>
+        <updated-at type="datetime">2009-06-18T00:19:34Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/661310</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19586</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-04T22:06:25Z</created-at>
+    <description></description>
+    <nickname>DS:Freedom OSS</nickname>
+    <updated-at type="datetime">2009-05-04T22:06:25Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/19894</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-05-04T22:15:27Z</created-at>
+        <nickname>App Server</nickname>
+        <updated-at type="datetime">2009-05-04T22:15:27Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662087</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-21T19:47:15Z</created-at>
+        <nickname>Dan's MySQL</nickname>
+        <updated-at type="datetime">2009-05-21T21:07:18Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670710</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-21T20:17:20Z</created-at>
+        <nickname>DS MASTER</nickname>
+        <updated-at type="datetime">2009-08-26T17:20:31Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670716</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-21T20:17:20Z</created-at>
+        <nickname>DS Slave</nickname>
+        <updated-at type="datetime">2009-08-25T17:04:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670723</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-04T22:19:05Z</created-at>
+        <nickname>LB 2</nickname>
+        <updated-at type="datetime">2009-05-04T22:19:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662089</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-04T22:14:36Z</created-at>
+        <nickname>LB1</nickname>
+        <updated-at type="datetime">2009-05-04T22:23:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662086</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-04T22:17:56Z</created-at>
+        <nickname>Web App 2</nickname>
+        <updated-at type="datetime">2009-05-04T22:17:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662088</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/19894</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-06T03:13:23Z</created-at>
+    <description></description>
+    <nickname>CF-Build-PBX-Ubuntu</nickname>
+    <updated-at type="datetime">2009-05-06T03:13:23Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/20010</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-05-06T03:15:41Z</created-at>
+        <nickname>CF: FreeSwitch Server Build Box - Ubuntu</nickname>
+        <updated-at type="datetime">2009-05-12T16:18:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662433</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20010</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-06T17:23:31Z</created-at>
+    <description></description>
+    <nickname>CF: Production - PBX - Ubuntu</nickname>
+    <updated-at type="datetime">2009-05-06T17:23:31Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/20043</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-05-06T17:24:42Z</created-at>
+        <nickname>CF: Production - PBX - Ubuntu</nickname>
+        <updated-at type="datetime">2009-05-12T16:18:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/662585</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20043</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-14T19:39:41Z</created-at>
+    <description>Brian Adler's test/experimental deployment</description>
+    <nickname>badler</nickname>
+    <updated-at type="datetime">2009-05-14T19:39:41Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/20569</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T18:57:49Z</created-at>
+        <nickname>BA: LAMP test MySQL 5.1</nickname>
+        <updated-at type="datetime">2009-07-02T18:11:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679386</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-19T19:19:36Z</created-at>
+        <nickname>BA: LAMP v4 developer - large</nickname>
+        <updated-at type="datetime">2009-07-07T00:28:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677054</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-18T20:44:58Z</created-at>
+        <nickname>BA: LAMP v4 developer - small</nickname>
+        <updated-at type="datetime">2009-07-07T00:28:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/676831</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-18T20:44:58Z</created-at>
+        <nickname>BA: LAMP v4 developer - small v1</nickname>
+        <updated-at type="datetime">2009-06-26T00:46:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677398</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-18T20:44:58Z</created-at>
+        <nickname>BA: LAMP v4 developer - small v2</nickname>
+        <updated-at type="datetime">2009-08-18T00:27:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/687499</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T23:10:03Z</created-at>
+        <nickname>BA: LAMP v4 developer - small with LVM</nickname>
+        <updated-at type="datetime">2009-07-31T22:48:23Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677451</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-07-14T23:09:44Z</created-at>
+        <nickname>badler GoGrid 32-bit test</nickname>
+        <updated-at type="datetime">2009-08-07T19:54:19Z</updated-at>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-08-03T17:31:50Z</created-at>
+        <nickname>badler GoGrid 32-bit test v1</nickname>
+        <updated-at type="datetime">2009-08-08T04:25:46Z</updated-at>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-11T16:46:48Z</created-at>
+        <nickname>badler Oracle 11g v3 server</nickname>
+        <updated-at type="datetime">2009-06-11T20:56:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/675097</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-12T15:43:59Z</created-at>
+        <nickname>badler Oracle 11g v4 server</nickname>
+        <updated-at type="datetime">2009-06-12T16:32:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/675353</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-08T04:18:23Z</created-at>
+        <nickname>badler-test-aws</nickname>
+        <updated-at type="datetime">2009-08-08T04:24:10Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/686739</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T18:07:02Z</created-at>
+        <nickname>badler-Windoze</nickname>
+        <updated-at type="datetime">2009-07-22T18:18:26Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682742</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-28T21:02:24Z</created-at>
+        <nickname>DBSCLIENT</nickname>
+        <updated-at type="datetime">2009-07-29T17:40:22Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683957</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-28T20:53:48Z</created-at>
+        <nickname>DBSS0001</nickname>
+        <updated-at type="datetime">2009-07-29T17:40:22Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683953</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-28T20:57:46Z</created-at>
+        <nickname>DBSS0002</nickname>
+        <updated-at type="datetime">2009-07-29T17:40:24Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683955</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-28T20:58:59Z</created-at>
+        <nickname>DBSS0003</nickname>
+        <updated-at type="datetime">2009-07-29T17:40:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683956</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-22T18:36:09Z</created-at>
+        <nickname>Frontend-badler</nickname>
+        <updated-at type="datetime">2009-05-22T23:08:55Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670856</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-06T22:23:27Z</created-at>
+        <nickname>LAMP v4 developer (EU)</nickname>
+        <updated-at type="datetime">2009-07-06T22:52:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/680170</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-05-27T18:50:51Z</created-at>
+        <nickname>LAMP v4 developer (GoGrid) - badler</nickname>
+        <updated-at type="datetime">2009-07-13T21:15:14Z</updated-at>
+      </server>
+      <server type="GogridServer">
+        <created-at type="datetime">2009-05-27T18:50:51Z</created-at>
+        <nickname>LAMP v4 developer (GoGrid) - badler clone</nickname>
+        <updated-at type="datetime">2009-05-28T22:30:31Z</updated-at>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-20T22:53:50Z</created-at>
+        <nickname>LB Apache+HAproxy+httpd-devel</nickname>
+        <updated-at type="datetime">2009-05-21T22:11:47Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/670562</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-24T17:02:12Z</created-at>
+        <nickname>openx db test</nickname>
+        <updated-at type="datetime">2009-06-26T00:46:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677935</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/20569</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-23T18:21:13Z</created-at>
+    <description>Alex's deployment</description>
+    <nickname>AP: default</nickname>
+    <updated-at type="datetime">2009-07-29T12:31:08Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/21071</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-13T20:58:18Z</created-at>
+        <nickname>AP: apache webserver us-east-1a</nickname>
+        <updated-at type="datetime">2009-08-21T10:23:17Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/681283</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-03T16:50:02Z</created-at>
+        <nickname>AP: first centos</nickname>
+        <updated-at type="datetime">2009-08-03T18:02:15Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/684983</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-09T22:35:27Z</created-at>
+        <nickname>AP: HTTPerf Test-EU</nickname>
+        <updated-at type="datetime">2009-08-04T22:08:09Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/680913</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-04T12:48:25Z</created-at>
+        <nickname>AP: HTTPerf Test-US</nickname>
+        <updated-at type="datetime">2009-08-04T20:50:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/685265</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-07T09:26:20Z</created-at>
+        <nickname>AP: JBOSS 5.1GA</nickname>
+        <updated-at type="datetime">2009-08-25T08:55:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/686476</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-13T16:15:41Z</created-at>
+        <nickname>AP: LAMP v4 developer</nickname>
+        <updated-at type="datetime">2009-08-17T21:33:49Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688089</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-28T08:46:47Z</created-at>
+        <nickname>AP: LAMP v4 developer-eu</nickname>
+        <updated-at type="datetime">2009-08-13T22:11:56Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683830</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-09T00:18:55Z</created-at>
+        <nickname>AP: LAMP v4 trial - US</nickname>
+        <updated-at type="datetime">2009-07-09T22:39:00Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/680720</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-25T16:36:59Z</created-at>
+        <nickname>AP: LAMPT v1 - war</nickname>
+        <updated-at type="datetime">2009-08-26T20:09:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689761</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-25T16:36:59Z</created-at>
+        <nickname>AP: LAMPT v1 - zip</nickname>
+        <updated-at type="datetime">2009-08-26T20:09:57Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690044</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T22:22:37Z</created-at>
+        <nickname>AP: Mysql Additional v13</nickname>
+        <updated-at type="datetime">2009-07-23T01:02:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682828</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-15T17:48:21Z</created-at>
+        <nickname>AP: MySQL Bootstrap v13</nickname>
+        <updated-at type="datetime">2009-07-23T00:46:38Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/681611</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-23T17:02:29Z</created-at>
+        <nickname>AP: MySQL EBS master</nickname>
+        <updated-at type="datetime">2009-07-23T17:02:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683031</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-05-24T10:11:39Z</created-at>
+        <nickname>AP: PHPFrontEnd eu-west-1a</nickname>
+        <updated-at type="datetime">2009-08-21T13:41:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/671005</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-29T12:27:21Z</created-at>
+        <nickname>AP: TomCat6 FrontEnd v2</nickname>
+        <updated-at type="datetime">2009-07-30T17:46:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/684073</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-15T20:05:06Z</created-at>
+        <nickname>AP: Windoze 2003RS from Amazon's AMI</nickname>
+        <updated-at type="datetime">2009-08-18T12:13:48Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/681768</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21071</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-05-26T16:48:46Z</created-at>
+    <description></description>
+    <nickname>HP: Animoto Test</nickname>
+    <updated-at type="datetime">2009-05-26T16:48:46Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/21169</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-05-26T16:54:09Z</created-at>
+        <nickname>HP: Animoto Test</nickname>
+        <updated-at type="datetime">2009-05-26T21:11:52Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/671315</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/21169</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-06-17T20:54:06Z</created-at>
+    <description></description>
+    <nickname>HP: VPN Cubed</nickname>
+    <updated-at type="datetime">2009-06-18T15:35:53Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/22339</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-06-17T20:56:53Z</created-at>
+        <nickname>HP: Bare Bones</nickname>
+        <updated-at type="datetime">2009-06-24T22:45:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/676364</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22339</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-18T15:28:17Z</created-at>
+        <nickname>HP: VPN Cubed Manager</nickname>
+        <updated-at type="datetime">2009-06-23T21:00:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/676737</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22339</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T22:06:51Z</created-at>
+        <nickname>HP: VPN Cubed Manager Deux</nickname>
+        <updated-at type="datetime">2009-06-23T21:00:50Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677434</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22339</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T20:59:11Z</created-at>
+        <nickname>LAMT v1 developer</nickname>
+        <updated-at type="datetime">2009-07-22T20:59:11Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682801</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22339</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-02T16:09:19Z</created-at>
+        <nickname>New Cohesive FT VPN Cubed Manager (EU)</nickname>
+        <updated-at type="datetime">2009-07-02T16:09:19Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679678</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22339</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-06-22T16:12:05Z</created-at>
+    <description></description>
+    <nickname>HP: BI from Macro</nickname>
+    <updated-at type="datetime">2009-06-22T16:12:05Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/22556</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T16:12:20Z</created-at>
+        <nickname>BI: Jasperserver</nickname>
+        <updated-at type="datetime">2009-07-01T21:00:05Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677341</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22556</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T16:12:21Z</created-at>
+        <nickname>BI: Talend Repository</nickname>
+        <updated-at type="datetime">2009-07-02T20:34:04Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677342</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22556</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-06-22T16:12:21Z</created-at>
+        <nickname>BI: Vertica</nickname>
+        <updated-at type="datetime">2009-07-02T20:33:20Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/677343</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/22556</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-01T19:31:03Z</created-at>
+    <description></description>
+    <nickname>Business Intelligence</nickname>
+    <updated-at type="datetime">2009-07-10T21:20:12Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23078</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:24Z</created-at>
+        <nickname>Jasperserver</nickname>
+        <updated-at type="datetime">2009-08-08T21:06:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679399</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23078</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:26Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-07-10T21:21:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679400</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23078</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:26Z</created-at>
+        <nickname>Vertica</nickname>
+        <updated-at type="datetime">2009-08-08T21:06:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679401</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23078</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-01T20:14:57Z</created-at>
+    <description></description>
+    <nickname>My Test</nickname>
+    <updated-at type="datetime">2009-07-01T20:14:57Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23082</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T20:15:09Z</created-at>
+        <nickname>BI: Jasperserver</nickname>
+        <updated-at type="datetime">2009-07-01T21:00:07Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679410</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23082</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T20:15:10Z</created-at>
+        <nickname>BI: Talend Repository</nickname>
+        <updated-at type="datetime">2009-07-01T20:15:10Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679411</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23082</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T20:15:10Z</created-at>
+        <nickname>BI: Vertica</nickname>
+        <updated-at type="datetime">2009-07-01T21:04:08Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679412</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23082</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-04T04:57:53Z</created-at>
+    <description></description>
+    <nickname>ZZZ JMWhite</nickname>
+    <updated-at type="datetime">2009-07-22T17:27:04Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23232</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T18:20:04Z</created-at>
+        <nickname>DM Testing</nickname>
+        <updated-at type="datetime">2009-07-22T18:20:40Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682746</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-21T19:27:17Z</created-at>
+        <nickname>httpd</nickname>
+        <updated-at type="datetime">2009-08-13T22:57:46Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682556</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-08T16:14:17Z</created-at>
+        <nickname>Master - Rev 11</nickname>
+        <updated-at type="datetime">2009-07-08T17:15:54Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/680533</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T17:38:55Z</created-at>
+        <nickname>MySQL EBS (Ubuntu)</nickname>
+        <updated-at type="datetime">2009-08-26T17:39:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690104</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-04T04:58:55Z</created-at>
+        <nickname>Slave</nickname>
+        <updated-at type="datetime">2009-08-07T18:20:18Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/679963</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-21T19:27:17Z</created-at>
+        <nickname>tcc v1</nickname>
+        <updated-at type="datetime">2009-07-22T20:54:19Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682733</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23232</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-06T02:18:53Z</created-at>
+    <description>MyDescription</description>
+    <nickname>MyNickName</nickname>
+    <updated-at type="datetime">2009-07-06T02:18:53Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23263</href>
+    <servers type="array"/>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-17T21:59:46Z</created-at>
+    <description>Test misc deployments, practice, etc.</description>
+    <nickname>GED:  Splunk and Server Array</nickname>
+    <updated-at type="datetime">2009-07-17T21:59:46Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23827</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-17T21:59:47Z</created-at>
+        <nickname>LP Stack</nickname>
+        <updated-at type="datetime">2009-07-17T21:59:47Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682013</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23827</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-17T22:09:31Z</created-at>
+    <description>Serve up auto-generated RightScale API docs for viewing</description>
+    <nickname>GED:  RS API Docs via Apache</nickname>
+    <updated-at type="datetime">2009-07-17T22:09:31Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/23828</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-17T22:09:31Z</created-at>
+        <nickname>RightScale API Docs via Apache</nickname>
+        <updated-at type="datetime">2009-07-17T22:09:31Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682015</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/23828</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-06-17T20:54:06Z</created-at>
+    <description></description>
+    <nickname>HP: Wavemaker</nickname>
+    <updated-at type="datetime">2009-07-22T21:10:48Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/24006</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-22T20:59:11Z</created-at>
+        <nickname>LAMT v1 developer</nickname>
+        <updated-at type="datetime">2009-07-28T23:13:16Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/682815</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24006</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-23T22:06:45Z</created-at>
+    <description></description>
+    <nickname>RightGrid_Demo_App_1248386809123</nickname>
+    <updated-at type="datetime">2009-07-23T22:06:50Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/24073</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-23T22:06:50Z</created-at>
+        <nickname>Job Coordinator</nickname>
+        <updated-at type="datetime">2009-07-24T00:29:33Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683128</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24073</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-03T09:01:22Z</created-at>
+    <description></description>
+    <nickname>AP: WaveMaker</nickname>
+    <updated-at type="datetime">2009-08-12T17:47:25Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/24587</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-24T16:48:26Z</created-at>
+        <nickname>AP: LAMPT CRMSample</nickname>
+        <updated-at type="datetime">2009-08-06T14:54:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/684547</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24587</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-24T16:48:26Z</created-at>
+        <nickname>AP: LAMPT CRMSample</nickname>
+        <updated-at type="datetime">2009-08-06T14:54:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/683270</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24587</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-05T16:32:01Z</created-at>
+    <description>- Customer: 3d3
+- IDS Environment</description>
+    <nickname>RC: 3D3 Dev</nickname>
+    <updated-at type="datetime">2009-08-05T16:32:01Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/24769</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T20:33:05Z</created-at>
+        <nickname>RC: 3d3 Client</nickname>
+        <updated-at type="datetime">2009-08-24T17:03:48Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688667</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24769</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T20:33:35Z</created-at>
+        <nickname>RC: 3d3 Server</nickname>
+        <updated-at type="datetime">2009-08-24T16:45:55Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688668</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/24769</deployment-href>
+        <state>operational</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-07-01T19:31:03Z</created-at>
+    <description></description>
+    <nickname>Business Intelligence v1</nickname>
+    <updated-at type="datetime">2009-08-08T20:36:00Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25042</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:24Z</created-at>
+        <nickname>Jasperserver</nickname>
+        <updated-at type="datetime">2009-08-08T20:36:01Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/686794</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25042</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:26Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-08-08T20:36:03Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/686795</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25042</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-07-01T19:31:26Z</created-at>
+        <nickname>Vertica</nickname>
+        <updated-at type="datetime">2009-08-08T20:36:04Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/686796</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25042</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-17T17:57:54Z</created-at>
+    <description>test api deployment</description>
+    <nickname>apitest</nickname>
+    <updated-at type="datetime">2009-08-17T17:57:54Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25539</href>
+    <servers type="array"/>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-17T20:42:48Z</created-at>
+    <description>New (beta) Deployment to use as Sandbox for RightStart training efforts. </description>
+    <nickname>RightTrain</nickname>
+    <updated-at type="datetime">2009-08-17T21:10:23Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25554</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T21:15:25Z</created-at>
+        <nickname>MySQL Master</nickname>
+        <updated-at type="datetime">2009-08-17T21:15:25Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688679</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25554</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T21:16:29Z</created-at>
+        <nickname>MySQL Slave</nickname>
+        <updated-at type="datetime">2009-08-17T21:16:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688680</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25554</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T21:20:32Z</created-at>
+        <nickname>WordPress FE1</nickname>
+        <updated-at type="datetime">2009-08-17T21:20:32Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688683</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25554</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-17T21:21:43Z</created-at>
+        <nickname>WordPress FE2</nickname>
+        <updated-at type="datetime">2009-08-17T21:21:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688684</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25554</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-19T20:21:27Z</created-at>
+    <description>The Talend Jaspersoft and Vertica BI stack</description>
+    <nickname>TestFix</nickname>
+    <updated-at type="datetime">2009-08-19T20:21:27Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25660</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-19T20:21:37Z</created-at>
+        <nickname>Jasper Server Pro</nickname>
+        <updated-at type="datetime">2009-08-19T20:21:37Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688982</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25660</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-19T20:21:39Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-08-19T20:21:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688983</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25660</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-19T20:21:39Z</created-at>
+        <nickname>Vertica Analytic Database</nickname>
+        <updated-at type="datetime">2009-08-19T20:21:39Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/688984</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25660</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-21T13:36:38Z</created-at>
+    <description></description>
+    <nickname>AP: haproxy LB</nickname>
+    <updated-at type="datetime">2009-08-24T11:23:43Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25744</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-21T13:41:02Z</created-at>
+        <nickname>PHP FrontEnd v7</nickname>
+        <updated-at type="datetime">2009-08-24T15:58:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689189</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25744</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-21T13:41:02Z</created-at>
+        <nickname>PHP FrontEnd v7 - 2</nickname>
+        <updated-at type="datetime">2009-08-24T15:58:06Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689458</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25744</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-21T23:34:24Z</created-at>
+    <description>Quick test for RightTrain stuff.</description>
+    <nickname>RT Test LAMP Deployment</nickname>
+    <updated-at type="datetime">2009-08-21T23:34:24Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25761</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-21T23:39:21Z</created-at>
+        <nickname>All in one LAMP</nickname>
+        <updated-at type="datetime">2009-08-22T00:27:35Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/689273</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25761</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-26T00:54:19Z</created-at>
+    <description>The Talend Jaspersoft and Vertica BI stack</description>
+    <nickname>hanstest1</nickname>
+    <updated-at type="datetime">2009-08-26T00:54:19Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25925</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T00:54:38Z</created-at>
+        <nickname>Jasper Server Pro</nickname>
+        <updated-at type="datetime">2009-08-26T00:54:38Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690021</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25925</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T00:54:43Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-08-26T00:54:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690022</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25925</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T00:54:43Z</created-at>
+        <nickname>Vertica Analytic Database</nickname>
+        <updated-at type="datetime">2009-08-26T00:54:43Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690023</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25925</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-26T01:02:50Z</created-at>
+    <description>The Talend Jaspersoft and Vertica BI stack</description>
+    <nickname>test</nickname>
+    <updated-at type="datetime">2009-08-26T01:02:50Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25926</href>
+    <servers type="array"/>
+  </deployment>
+  <deployment>
+    <created-at type="datetime">2009-08-26T01:03:17Z</created-at>
+    <description>The Talend Jaspersoft and Vertica BI stack</description>
+    <nickname>test1</nickname>
+    <updated-at type="datetime">2009-08-26T01:03:17Z</updated-at>
+    <href>https://my.rightscale.com/api/acct/7954/deployments/25927</href>
+    <servers type="array">
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T01:03:29Z</created-at>
+        <nickname>Jasper Server Pro</nickname>
+        <updated-at type="datetime">2009-08-26T01:03:29Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690024</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25927</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T01:03:31Z</created-at>
+        <nickname>Talend Repository</nickname>
+        <updated-at type="datetime">2009-08-26T01:03:31Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690025</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25927</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+      <server type="Server">
+        <created-at type="datetime">2009-08-26T01:03:31Z</created-at>
+        <nickname>Vertica Analytic Database</nickname>
+        <updated-at type="datetime">2009-08-26T01:03:31Z</updated-at>
+        <href>https://my.rightscale.com/api/acct/7954/servers/690026</href>
+        <deployment-href>https://my.rightscale.com/api/acct/7954/deployments/25927</deployment-href>
+        <state>stopped</state>
+        <server-type>ec2</server-type>
+      </server>
+    </servers>
+  </deployment>
+</deployments>

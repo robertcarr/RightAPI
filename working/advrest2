@@ -1,0 +1,61 @@
+#!/usr/bin/ruby
+# RightScale API examples with basic xml parsing
+# 
+# MORE INFO: 
+# rest_client ruby gem  http://rest-client.heroku.com/rdoc/
+# http://github.com/jnunemaker/crack/tree/master
+
+require 'rubygems'   # not required if ruby >= 1.9
+require 'rest_client'
+
+
+
+api =	{	:servers		=> "servers" ,
+		:deployments		=> "deployments",
+		:ebs			=> "ec2_ebs_volumes",
+		:snapshots		=> "ec2_ebs_snapshots",
+		:alerts			=> "alert_specs",
+		:eips			=> "ec2_elastic_ips",
+		:securitygroups		=> "ec2_security_groups",
+		:sshkeys		=> "ec2_ssh_keys",
+		:arrays			=> "server_arrays",
+		:s3			=> "s3_buckets",
+		:credentials		=> "credentials",
+		:macros			=> "macros",
+		:servertemplates	=> "server_templates",
+		:rightscripts		=> "right_scripts"
+	}
+
+
+def	startAPI(username, password, account) 
+	@username = username
+	@password = password
+	@account = account
+	RestClient.log = 'rest.log'
+	rsAPI = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
+end
+
+def	server_status(server2)
+		@server=server2
+		rsapi[self.api[:servers]+"/#{@server}"].get :x_api_version => '1.0'
+end
+
+#####
+## Begin by creating the API handle
+#####
+rsapi = startAPI(username,password,account)
+
+#####
+## Continue by passing calls as needed 
+#####
+
+#data = rsapi[api[:servers]].get :x_api_version => '1.0'
+#data = rsapi[api[:servers]+"/#{server}"].get :x_api_version => '1.0'
+server_status(server)
+
+###
+### Dump to console the API results
+###
+puts data.inspect
+
+

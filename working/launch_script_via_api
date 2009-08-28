@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Launch script against a particular server
+# Useful for cron jobs
+
+
+SERVER_ID=642990
+SCRIPT_ID=20412
+ACCOUNT_ID=7954
+ACCOUNT_EMAIL=
+ACCOUNT_PASSWORD=
+COOKIE_FILE="API_COOKIE"
+
+# Authenticate
+# curl -c $COOKIE_FILE -u $email:$password https://my.rightscale.com/api/acct/$account/login?api_version=1.0
+
+
+#Launch script # associated with server #
+
+curl -d right_script=https://my.rightscale.com/api/acct/$ACCOUNT_ID/right_scripts/$SCRIPT_ID -H 'X-API-VERSION: 1.0' -u $ACCOUNT_EMAIL:$ACCOUNT_PASSWORD https://my.rightscale.com/api/acct/$ACCOUNT_ID/servers/$SERVER_ID/run_script
