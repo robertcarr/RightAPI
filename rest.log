@@ -1,0 +1,3 @@
+RestClient.post "https://my.rightscale.com/api/acct/7954/deployments/-606717338/stop_all", "deployments[nickname]=Deployment&deployments[description]=Description", :x_api_version=>"1.0", :content_type=>"application/x-www-form-urlencoded"
+RestClient.get "https://my.rightscale.com/api/acct/7954/deployments", :x_api_version=>"1.0"
+# => 200 OK | application/xml 11295 bytes

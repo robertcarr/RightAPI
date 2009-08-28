@@ -1,9 +1,10 @@
 #!/usr/bin/ruby
 #
 
-require '/home/rob/API/RightAPI'
+require 'RightAPI'
+require 'crack'
 
 api = RightAPI.new
-api.login(username,password,account)
-puts api.servers_show_all
+api.login('robert@rightscale.com','K3yst0n3','7954')
+api.deployments_copy('12869')
 

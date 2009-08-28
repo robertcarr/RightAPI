@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (RightAPI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 19</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+
+        <span class="ruby-ivar">@api</span> = {       <span class="ruby-identifier">:servers</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;servers&quot;</span> ,
+                        <span class="ruby-identifier">:deployments</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;deployments&quot;</span>,
+                        <span class="ruby-identifier">:ebs</span>                 =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;ec2_ebs_volumes&quot;</span>,
+                        <span class="ruby-identifier">:snapshots</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;ec2_ebs_snapshots&quot;</span>,
+                        <span class="ruby-identifier">:alerts</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;alert_specs&quot;</span>,
+                        <span class="ruby-identifier">:eips</span>                        =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;ec2_elastic_ips&quot;</span>,
+                        <span class="ruby-identifier">:securitygroups</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;ec2_security_groups&quot;</span>,
+                        <span class="ruby-identifier">:sshkeys</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;ec2_ssh_keys&quot;</span>,
+                        <span class="ruby-identifier">:arrays</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;server_arrays&quot;</span>,
+                        <span class="ruby-identifier">:s3</span>                  =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;s3_buckets&quot;</span>,
+                        <span class="ruby-identifier">:credentials</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;credentials&quot;</span>,
+                        <span class="ruby-identifier">:macros</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;macros&quot;</span>,
+                        <span class="ruby-identifier">:servertemplates</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;server_templates&quot;</span>,
+                        <span class="ruby-identifier">:rightscripts</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;right_scripts&quot;</span>
+                }
+
+                <span class="ruby-ivar">@logged_in</span>=<span class="ruby-keyword kw">false</span>
+
+        <span class="ruby-identifier">api_version</span>=<span class="ruby-value str">'1.0'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_version</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
