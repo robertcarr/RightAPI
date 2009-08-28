@@ -15,7 +15,6 @@ require 'rest_client'
 @apiobject = Object.new
 	
 attr_accessor :username, :password, :account, :api_version
-
 	def initialize
 
 	@api =	{	:servers		=> "servers" ,
@@ -31,7 +30,8 @@ attr_accessor :username, :password, :account, :api_version
 			:credentials		=> "credentials",
 			:macros			=> "macros",
 			:servertemplates	=> "server_templates",
-			:rightscripts		=> "right_scripts"
+			:rightscripts		=> "right_scripts",
+			:status			=> "statuses"
 		}
 
 		@logged_in=false
@@ -51,12 +51,148 @@ attr_accessor :username, :password, :account, :api_version
 
 	def	servers_show_all
 		# Get /api/acct/1/servers		
-		@apiobject[@api[:servers]].get :x_api_version => '1.0'
+		show_all(:servers)
+	end
 	
+	def	show_all(obj)
+		@apiobject[obj].get :x_api_version => '1.0'
 	end
 
+	def	show_item(obj,id)
+
+		if obj == :credentials then
+		#@apiobject[@api[:credentials]+"/#{id}"].get :x_api_version => '1.0'
+		end
+	end
+
+	def	arrays_create(params)
+		@apiobject[@api[:arrays]].post params, :x_api_version => '1.0'
+	end
+	
+	def	arrays_update(arrayid,params)
+		@apiobject[@api[:arrays]+"/#{id}"].put params, :x_api_version => '1.0'
+	end
+	
+	def	arrays_delete(id)
+		@apiobject[@api[:arrays]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+	
+	def	arrays_show(id)
+		@apiobject[@api[:arrays]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	credentials_show_all
+		show_all(:credentials)
+	end
+	
+	def	credentials_show(id)
+		show_item(:credentials,id)
+
+		#@apiobject[@api[:credentials]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	credentials_create(params)
+		@apiobject[@api[:credentials]].post params, :x_api_version => '1.0'
+	end
+	
+	def	credentials_update(id)
+		params = {}
+		@apiobject[@api[:credentials]+"/#{id}"].put params, :x_api_version => '1.0'
+	end
+	
+	def	credentials_delete(id)
+		@apiobject[@api[:credentials]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+	
+	def	servertemplates_show_all
+		@apiobject[@api[:servertemplates]].get :x_api_version => '1.0'
+	end
+	
+	def	servertemplates_show(id)
+		@apiobject[@api[:servertemplates]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	arrays_show_all
+		show_all(:arrays)
+	end
+	
+	def	s3_show(id)
+		@apiobject[@api[:s3]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	s3_delete(id)
+		@apiobject[@api[:s3]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+	
+	def	s3_create(name)
+		params = { "s3_bucket[name]" => name }
+		@apiobject[@api[:s3]+"/#{id}"].post params, :x_api_version => '1.0'
+	end
+	
+	def	s3_show_all
+		show_all(:s3)	
+	end
+	
+	def	alerts_show_all
+		show_all(:alerts)
+	end
+	
+	def	alerts_show(id)
+		@apiobject[@api[:alerts]+"/#{id}"].get :x_api_version => '1.0'
+	end
+
+	def	eips_show_all
+		show_all(:eips)
+	end
+
+	def	eips_create
+		params = {}
+		@apiobject[@api[:eips]].get params, :x_api_version => '1.0'
+	end
+
+	def	eips_show(id)
+		@apiobject[@api[:eips]+"/#{id}"].get :x_api_version => '1.0'
+	end
+
+	def	eips_delete(id)
+		@apiobject[@api[:eips]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+
+	def	alerts_delete(id)
+		@apiobject[@api[:alerts]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+	
 	def	deployments_show_all
-		@apiobject[@api[:deployments]].get :x_api_version => '1.0'
+		show_all(:deployments)
+	end
+
+	def	snapshots_show_all
+		show_all(:snapshots)
+	end
+	
+	def	securitygroups_show_all
+		show_all(:security_groups)
+	end
+	
+	def	securitygroups_show(id)
+		@apiobject[@api[:securitygroups]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	securitygroups_delete(id)
+		@apiobject[@api[:securitygroups]+"/#{id}"].delete :x_api_version => '1.0'
+	end
+	
+	def	sshkeys_show(id)
+		@apiobject[@api[:sshkeys]+"/#{id}"].get :x_api_version => '1.0'
+	end
+	
+	def	sshkeys_create(keyname)
+		params = { "ec2_ssh_key[aws_key_name]" => keyname }
+		@apiobject[@api[:sshkeys]].post params, :x_api_version => '1.0'
+	end
+	
+	def	sshkeys_delete(id)
+		@apiobject[@api[:sshkeys]+"/#{id}"].delete :x_api_version => '1.0'
 	end
 	
 	def	deployments_start_all(id)
@@ -91,7 +227,11 @@ attr_accessor :username, :password, :account, :api_version
 	def	deployments_show(id)
                 #URL: GET /api/acct/1/deployments/1
 		@apiobject[@api[:deployments]+"/#{id}"].get :x_api_version => '1.0'
+	end
 
+	def	status(id)
+		#URL:  GET /api/acct/1/statuses/000
+		@apiobject[@api[:status]+"/#{id}"].get :x_api_version => '1.0'
 	end
 	
 	def	ebs_delete(ebsid)
@@ -140,7 +280,7 @@ attr_accessor :username, :password, :account, :api_version
 		puts @apiobject.inspect
 	end
 	
-		
+
+private :show_all
+private :show_item
 end
-
-
