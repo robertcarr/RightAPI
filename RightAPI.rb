@@ -14,7 +14,7 @@ require 'rest_client'
 
 @apiobject = Object.new
 	
-attr_accessor :username, :password, :account, :api_version
+attr_accessor :api_version, :log
 	def initialize
 
 	@api =	{	:servers		=> "servers" ,
@@ -34,8 +34,6 @@ attr_accessor :username, :password, :account, :api_version
 			:status			=> "statuses"
 		}
 
-		@logged_in=false
-
 	api_version='1.0' if api_version == nil
 
 	end
@@ -44,7 +42,9 @@ attr_accessor :username, :password, :account, :api_version
 		@username = username
 		@password = password
 		@account = account
-		RestClient.log = 'rest.log'
+		if @log == true 
+			RestClient.log = 'rest.log'
+		end
 		@apiobject = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
 		@logged_in=true
 	end
@@ -210,13 +210,15 @@ attr_accessor :username, :password, :account, :api_version
 	def	deployments_start_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/start_all"].post params ,:x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/start_all"
+		post_string(req, params)
 	end
 
 	def	deployments_stop_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/stop_all"].post params, :x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/stop_all"
+		post_string(req, params)
 	end
 
 	def	deployments_create(nickname,description)
@@ -228,11 +230,12 @@ attr_accessor :username, :password, :account, :api_version
 	def	deployments_copy(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/duplicate"].post params, :x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/duplicate"
+		post_string(req, params)
 	end
 
 	def	deployments_delete(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
+                #URL: POST /api/acct/1/deployments/000
 		delete_item(:deployments, id)
 	end
 
