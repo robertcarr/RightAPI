@@ -63,6 +63,10 @@ attr_accessor :username, :password, :account, :api_version
 		@apiobject[req].get :x_api_version => '1.0'
 	end
 
+	def 	post_string(req, params)
+		@apiobject[req].post params, :x_api_version => '1.0'
+	end
+
 	def	delete_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
 		@apiobject[req].delete :x_api_version => '1.0'	
@@ -73,9 +77,7 @@ attr_accessor :username, :password, :account, :api_version
 	end
 
 	def	update_item(obj, id, params)
-		req=@api[obj].to_s + "/#{id}"
-		puts req.inspect
-		@apiobject[req].put params, :x_api_versions => '1.0'
+		@apiobject[obj + "/#{id}"].put params, :x_api_version => '1.0'
 	end
 
 	def	arrays_create(params)
@@ -106,9 +108,8 @@ attr_accessor :username, :password, :account, :api_version
 		create_item(:credentials, params)
 	end
 	
-	def	credentials_update(id)
-		params = {}
-		update_item(:credentials, id, params)
+	def	credentials_update(id,params)
+		update_item(:credentials.to_s, id, params)
 	end
 	
 	def	credentials_delete(id)
@@ -255,18 +256,23 @@ attr_accessor :username, :password, :account, :api_version
 		create_item(:ebs, params)
 	end
 
+	def	server_delete(id)
+		delete_item(:servers,id)
+	end
 	def 	server_show(id)
 		show_item(:servers, id)
 	end
 
 	def	server_stop(serverid)
 		params = {}
-		@apiobject[@api[:servers]+"/#{serverid}/stop"].post params, :x_api_version => '1.0'	
+		req=:servers.to_s + "/#{serverid}/stop"
+		post_string(req, params)
 	end		
 
 	def	server_start(serverid)
 		params = {}
-		@apiobject[@api[:servers]+"/#{serverid}/start"].post params, :x_api_version => '1.0'	
+		req=:servers.to_s + "/#{serverid}/start"
+		post_string(req, params)
 	end		
 
 	def	server_update(id, params)
@@ -274,17 +280,15 @@ attr_accessor :username, :password, :account, :api_version
 	end
 
 	def 	run_script(scriptid, serverid)
-		params = { "right_script" => "#{scriptid}" }
-		puts params.inspect
 		#URL: POST /api/acct/1/servers/000/run_script
-	
-		@apiobject[@api[:servers]+"/#{serverid}/run_script"].post params, :x_api_version => '1.0'
-		
+		params = { "right_script" => "#{scriptid}" }
+		req=:servers.to_s + "/#{serverid}/run_script"
+		post_string(req, params)	
 	end
 
-	def	server_update_nickname(serverid, name)
-		params = { "server[nickname]"	=> "#{name}" }	 
-		update_item(:servers, serverid, params)
+	def	server_update_nickname(id, name)
+		params = { "server[nickname]"	=> name }	 
+		update_item(:servers.to_s,id, params)
 	end
 	
 	def 	show_connection
