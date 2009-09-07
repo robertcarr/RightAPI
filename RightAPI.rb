@@ -92,15 +92,11 @@ attr_accessor :api_version, :log
 	end
 	
 	def	arrays_show(id)
-		show_item(:arrays,id)
-	end
-	
-	def	credentials_show_all
-		show_all(:credentials)
+		id.downcase == "all" ? show_all(:arrays) : show_item(:arrays,id) 
 	end
 	
 	def	credentials_show(id)
-		show_item(:credentials, id)
+		id.downcase == "all" ? show_all(:credentials) : show_item(:credentials,id) 
 	end
 	
 	def	credentials_create(params)
@@ -115,20 +111,13 @@ attr_accessor :api_version, :log
 		delete_item(:credentials, id)
 	end
 	
-	def	servertemplates_show_all
-		show_all(:servertemplates)
-	end
-	
 	def	servertemplates_show(id)
 		show_item(:servertemplates,id)
-	end
-	
-	def	arrays_show_all
-		show_all(:arrays)
+		id.downcase == "all" ? show_all(:servertemplates) : show_item(:servertemplates,id) 
 	end
 	
 	def	s3_show(id)
-		show_item(:s3,id)
+		id.downcase == "all" ? show_all(:s3) : show_item(:s3,id) 
 	end
 	
 	def	s3_delete(id)
@@ -140,20 +129,9 @@ attr_accessor :api_version, :log
 		create_item(:s3, params)
 	end
 	
-	def	s3_show_all
-		show_all(:s3)	
-	end
-	
-	def	alerts_show_all
-		show_all(:alerts)
-	end
-	
 	def	alerts_show(id)
+		id.downcase == "all" ? show_all(:alerts) : show_item(:alerts,id) 
 		show_item(:alerts, id)
-	end
-
-	def	eips_show_all
-		show_all(:eips)
 	end
 
 	def	eips_create
@@ -162,7 +140,7 @@ attr_accessor :api_version, :log
 	end
 
 	def	eips_show(id)
-		show_item(:eips, id)
+		id.downcase == "all" ? show_all(:eips) : show_item(:eips,id) 
 	end
 
 	def	eips_delete(id)
@@ -173,20 +151,13 @@ attr_accessor :api_version, :log
 		delete_item(:alerts, id)
 	end
 	
-	def	deployments_show_all
-		show_all(:deployments)
-	end
+	def	snapshots_show(id)
+		id.downcase == "all" ? show_all(:snapshots) : show_item(:snapshots,id) 	
+	end	
 
-	def	snapshots_show_all
-		show_all(:snapshots)
-	end
-	
-	def	securitygroups_show_all
-		show_all(:security_groups)
-	end
-	
 	def	securitygroups_show(id)
 		show_item(:securitygroups, id)
+		id.downcase == "all" ? show_all(:securitygroups) : show_item(:securitygroups,id) 
 	end
 	
 	def	securitygroups_delete(id)
@@ -194,8 +165,13 @@ attr_accessor :api_version, :log
 	end
 	
 	def	sshkeys_show(id)
-		show_item(:sshkeys, id)
+		if id == "all" then
+			show_all(:sshkeys)
+		else
+			show_item(:sshkeys, id)
+		end
 	end
+	
 	
 	def	sshkeys_create(keyname)
 		params = { "ec2_ssh_key[aws_key_name]" => keyname }
@@ -240,12 +216,16 @@ attr_accessor :api_version, :log
 
 	def	deployments_show(id)
                 #URL: GET /api/acct/1/deployments/1
-		show_item(:deployments, id)
+		id.downcase == "all" ? show_all(:deployments) : show_item(:deployments,id)
 	end
 
 	def	status(id)
 		#URL:  GET /api/acct/1/statuses/000
 		show_item(:status, id)
+	end
+
+	def	ebs_show(id)
+		id.downcase == "all" ? show_all(:ebs) : show_item(:ebs,id)
 	end
 	
 	def	ebs_delete(id)
@@ -262,7 +242,7 @@ attr_accessor :api_version, :log
 		delete_item(:servers,id)
 	end
 	def 	server_show(id)
-		show_item(:servers, id)
+		id.downcase == "all" ? show_all(:servers) : show_item(:servers,id) 		
 	end
 
 	def	server_stop(serverid)
@@ -288,7 +268,7 @@ attr_accessor :api_version, :log
 		post_string(req, params)	
 	end
 
-	def	server_update_nickname(id, name)
+	def	server_name(id, name)
 		params = { "server[nickname]"	=> name }	 
 		update_item(:servers.to_s,id, params)
 	end
