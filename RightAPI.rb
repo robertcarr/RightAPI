@@ -27,6 +27,8 @@ require 'rest_client'
 	
 attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
+
+
 	def initialize
 
 	@api =	{	:servers		=> "servers" ,
@@ -53,7 +55,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	login(username, password, account) 
-
 		puts "Debug mode on\n\n" if @debug
 
 		@username = username
@@ -66,8 +67,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			@log_file == nil ? RestClient.log = "#{@log_file_default}" : RestClient.log = "#{@log_file}"
 		end
 		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
-		puts @apiobject.inspect if @debug
-	
+		
+		rescue => e
+		puts e.message	
 	end
 
 	def 	debugger
@@ -76,6 +78,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	show_all(obj)
 		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		rescue => e
+		puts e.message
 	end
 	
 	def	show_item(obj,id)
@@ -85,26 +89,42 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			req=@api[obj].to_s + "/#{id}"
 			@apiobject[req].get :x_api_version => "#{@api_version}"
 		end
+
+		rescue => e
+		puts e.message		
+
 	end
 
 	def 	post_string(req, params)
 		@apiobject[req].post params, :x_api_version => "#{@api_version}"
 		puts params.inspect if @debug
+
+		rescue => e
+		puts e.message	
 	end
 
 	def	delete_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
 		@apiobject[req].delete :x_api_version => "#{@api_version}"
+		
+		rescue => e	
+		puts e.message
 	end
 
 	def 	create_item(obj, params)
 		@apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
 		puts params.inspect if @debug
+		
+		rescue=> e
+		puts e.message
 	end
 
 	def	update_item(obj, id, params)
 		@apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
 		puts params.inpsect if @debug
+
+		rescue=> e
+		puts e.message
 	end
 
 	def	arrays_create(params)
@@ -299,8 +319,13 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts @apiobject.inspect
 	end
 	
+	def	myerrors
+		rescue SystemError
+			puts "error"
+	end
 
 private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
 private :debugger
 
 end
+
