@@ -1,20 +1,32 @@
 #!/usr/bin/ruby
+# Copyright 2009 RightScale, Inc.
+# http://www.rightscale.com
+#
+# Ruby API Wrapper for RightScale API functions
+# Class: RightAPI
+#
+# Allows easier access to the RightScale API within your own ruby code and
+# Has limited debugging & error handling at this point.
+# 
+# Requires rest_client Ruby gem available online.
+# 
+# Example:
+# api = RightAPI.new	
+# api.login(username, password, account)
+# api.server_show("all")	# displays all servers in your account
+# api.server_show(serverid)	# displays server by id
+# api.server_name(serverid, "Servers New Name") 	# updates server name
+# api.log = true	# turns on REST log file
 
-##############################################################################
-##############################################################################
-
-require 'rubygems'   # not required if ruby >= 1.9
-
-#####
-## This is not a complete list of api calls: see API reference
-#####
+require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
 class RightAPI
 require 'rest_client'
 
 @apiobject = Object.new
 	
-attr_accessor :api_version, :log, :debug
+attr_accessor :api_version, :log, :debug, :api_url, :log_file
+
 	def initialize
 
 	@api =	{	:servers		=> "servers" ,
@@ -34,33 +46,45 @@ attr_accessor :api_version, :log, :debug
 			:status			=> "statuses"
 		}
 
-	@api_version='1.0' if @api_version == nil	# Change default API version
-	@log=false if @log == nil			# Logging of API calls true/false
-	@debug=false if @debug == nil			# Turn on/off debugging
+	@api_version = '1.0' if @api_version == nil	# Change default API version
+	@log_file_default = "rest.log"
+	@api_url = "https://my.rightscale.com/api/acct/" if @api_url == nil
 
 	end
 	
 	def	login(username, password, account) 
+
+		puts "Debug mode on\n\n" if @debug
+
 		@username = username
 		@password = password
 		@account = account
-		RestClient.log = "rest.log" if @log
-		@apiobject = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
+		@api_call = "#{@api_url}#{@account}"
+		unless @log.nil?
+			puts "logging=#{@log}" if @debug
+			puts "log_file=#{@log_file}" if @debug
+			@log_file == nil ? RestClient.log = "#{@log_file_default}" : RestClient.log = "#{@log_file}"
+		end
+		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
 		puts @apiobject.inspect if @debug
+	
 	end
 
-	def	servers_show_all
-		# Get /api/acct/1/servers		
-		show_all(:servers)
+	def 	debugger
+		caller[0][/`([^']*)'/, 1]
 	end
-	
+
 	def	show_all(obj)
 		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
 	end
-
+	
 	def	show_item(obj,id)
-		req=@api[obj].to_s + "/#{id}"
-		@apiobject[req].get :x_api_version => "#{@api_version}"
+		if id.downcase == "all" then
+			show_all(obj)
+		else
+			req=@api[obj].to_s + "/#{id}"
+			@apiobject[req].get :x_api_version => "#{@api_version}"
+		end
 	end
 
 	def 	post_string(req, params)
@@ -96,11 +120,11 @@ attr_accessor :api_version, :log, :debug
 	end
 	
 	def	arrays_show(id)
-		id.downcase == "all" ? show_all(:arrays) : show_item(:arrays,id) 
+		show_item(:arrays,id) 
 	end
 	
 	def	credentials_show(id)
-		id.downcase == "all" ? show_all(:credentials) : show_item(:credentials,id) 
+		show_item(:credentials,id) 
 	end
 	
 	def	credentials_create(params)
@@ -116,12 +140,11 @@ attr_accessor :api_version, :log, :debug
 	end
 	
 	def	servertemplates_show(id)
-		show_item(:servertemplates,id)
-		id.downcase == "all" ? show_all(:servertemplates) : show_item(:servertemplates,id) 
+		show_item(:servertemplates,id) 
 	end
 	
 	def	s3_show(id)
-		id.downcase == "all" ? show_all(:s3) : show_item(:s3,id) 
+		show_item(:s3,id) 
 	end
 	
 	def	s3_delete(id)
@@ -134,8 +157,7 @@ attr_accessor :api_version, :log, :debug
 	end
 	
 	def	alerts_show(id)
-		id.downcase == "all" ? show_all(:alerts) : show_item(:alerts,id) 
-		show_item(:alerts, id)
+		show_item(:alerts,id) 
 	end
 
 	def	eips_create
@@ -144,7 +166,7 @@ attr_accessor :api_version, :log, :debug
 	end
 
 	def	eips_show(id)
-		id.downcase == "all" ? show_all(:eips) : show_item(:eips,id) 
+		show_item(:eips,id) 
 	end
 
 	def	eips_delete(id)
@@ -156,12 +178,11 @@ attr_accessor :api_version, :log, :debug
 	end
 	
 	def	snapshots_show(id)
-		id.downcase == "all" ? show_all(:snapshots) : show_item(:snapshots,id) 	
+		show_item(:snapshots,id) 	
 	end	
 
 	def	securitygroups_show(id)
-		show_item(:securitygroups, id)
-		id.downcase == "all" ? show_all(:securitygroups) : show_item(:securitygroups,id) 
+		show_item(:securitygroups,id) 
 	end
 	
 	def	securitygroups_delete(id)
@@ -169,11 +190,7 @@ attr_accessor :api_version, :log, :debug
 	end
 	
 	def	sshkeys_show(id)
-		if id == "all" then
-			show_all(:sshkeys)
-		else
-			show_item(:sshkeys, id)
-		end
+		show_item(:sshkeys,id) 
 	end
 	
 	
@@ -220,7 +237,7 @@ attr_accessor :api_version, :log, :debug
 
 	def	deployments_show(id)
                 #URL: GET /api/acct/1/deployments/1
-		id.downcase == "all" ? show_all(:deployments) : show_item(:deployments,id)
+		show_item(:deployments,id)
 	end
 
 	def	status(id)
@@ -229,7 +246,7 @@ attr_accessor :api_version, :log, :debug
 	end
 
 	def	ebs_show(id)
-		id.downcase == "all" ? show_all(:ebs) : show_item(:ebs,id)
+		show_item(:ebs,id)
 	end
 	
 	def	ebs_delete(id)
@@ -242,26 +259,27 @@ attr_accessor :api_version, :log, :debug
 		create_item(:ebs, params)
 	end
 
-	def	server_delete(id)
+	def	servers_delete(id)
 		delete_item(:servers,id)
 	end
-	def 	server_show(id)
-		id.downcase == "all" ? show_all(:servers) : show_item(:servers,id) 		
+
+	def 	servers_show(id)
+		show_item(:servers,id) 		
 	end
 
-	def	server_stop(serverid)
+	def	servers_stop(serverid)
 		params = {}
 		req=:servers.to_s + "/#{serverid}/stop"
 		post_string(req, params)
 	end		
 
-	def	server_start(serverid)
+	def	servers_start(serverid)
 		params = {}
 		req=:servers.to_s + "/#{serverid}/start"
 		post_string(req, params)
 	end		
 
-	def	server_update(id, params)
+	def	servers_update(id, params)
 		update_item(id, params)
 	end
 
@@ -272,7 +290,7 @@ attr_accessor :api_version, :log, :debug
 		post_string(req, params)	
 	end
 
-	def	server_name(id, name)
+	def	servers_name(id, name)
 		params = { "server[nickname]"	=> name }	 
 		update_item(:servers.to_s,id, params)
 	end
@@ -283,4 +301,6 @@ attr_accessor :api_version, :log, :debug
 	
 
 private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
+private :debugger
+
 end
