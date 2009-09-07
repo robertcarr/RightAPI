@@ -42,9 +42,8 @@ attr_accessor :api_version, :log
 		@username = username
 		@password = password
 		@account = account
-		if @log == true 
+		puts @log.inspect
 			RestClient.log = 'rest.log'
-		end
 		@apiobject = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
 		@logged_in=true
 	end
@@ -55,7 +54,7 @@ attr_accessor :api_version, :log
 	end
 	
 	def	show_all(obj)
-		@apiobject[obj].get :x_api_version => '1.0'
+		@apiobject[@api[obj]].get :x_api_version => '1.0'
 	end
 
 	def	show_item(obj,id)
@@ -73,7 +72,7 @@ attr_accessor :api_version, :log
 	end
 
 	def 	create_item(obj, params)
-		@apiobject[obj].post params, :x_api_version => '1.0'		
+		@apiobject[@api[obj]].post params, :x_api_version => '1.0'		
 	end
 
 	def	update_item(obj, id, params)
