@@ -14,7 +14,7 @@ require 'rest_client'
 
 @apiobject = Object.new
 	
-attr_accessor :api_version, :log
+attr_accessor :api_version, :log, :debug
 	def initialize
 
 	@api =	{	:servers		=> "servers" ,
@@ -34,7 +34,9 @@ attr_accessor :api_version, :log
 			:status			=> "statuses"
 		}
 
-	api_version='1.0' if api_version == nil
+	@api_version='1.0' if @api_version == nil	# Change default API version
+	@log=false if @log == nil			# Logging of API calls true/false
+	@debug=false if @debug == nil			# Turn on/off debugging
 
 	end
 	
@@ -42,10 +44,9 @@ attr_accessor :api_version, :log
 		@username = username
 		@password = password
 		@account = account
-		puts @log.inspect
-			RestClient.log = 'rest.log'
+		RestClient.log = "rest.log" if @log
 		@apiobject = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
-		@logged_in=true
+		puts @apiobject.inspect if @debug
 	end
 
 	def	servers_show_all
@@ -54,29 +55,32 @@ attr_accessor :api_version, :log
 	end
 	
 	def	show_all(obj)
-		@apiobject[@api[obj]].get :x_api_version => '1.0'
+		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
 	end
 
 	def	show_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
-		@apiobject[req].get :x_api_version => '1.0'
+		@apiobject[req].get :x_api_version => "#{@api_version}"
 	end
 
 	def 	post_string(req, params)
-		@apiobject[req].post params, :x_api_version => '1.0'
+		@apiobject[req].post params, :x_api_version => "#{@api_version}"
+		puts params.inspect if @debug
 	end
 
 	def	delete_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
-		@apiobject[req].delete :x_api_version => '1.0'	
+		@apiobject[req].delete :x_api_version => "#{@api_version}"
 	end
 
 	def 	create_item(obj, params)
-		@apiobject[@api[obj]].post params, :x_api_version => '1.0'		
+		@apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		puts params.inspect if @debug
 	end
 
 	def	update_item(obj, id, params)
-		@apiobject[obj + "/#{id}"].put params, :x_api_version => '1.0'
+		@apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		puts params.inpsect if @debug
 	end
 
 	def	arrays_create(params)
@@ -278,6 +282,5 @@ attr_accessor :api_version, :log
 	end
 	
 
-private :show_all
-private :show_item
+private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
 end
