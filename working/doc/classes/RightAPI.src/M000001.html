@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 19</span>
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 30</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
 
         <span class="ruby-ivar">@api</span> = {       <span class="ruby-identifier">:servers</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;servers&quot;</span> ,
@@ -26,12 +26,13 @@
                         <span class="ruby-identifier">:credentials</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;credentials&quot;</span>,
                         <span class="ruby-identifier">:macros</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;macros&quot;</span>,
                         <span class="ruby-identifier">:servertemplates</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;server_templates&quot;</span>,
-                        <span class="ruby-identifier">:rightscripts</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;right_scripts&quot;</span>
+                        <span class="ruby-identifier">:rightscripts</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;right_scripts&quot;</span>,
+                        <span class="ruby-identifier">:status</span>                      =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;statuses&quot;</span>
                 }
 
-                <span class="ruby-ivar">@logged_in</span>=<span class="ruby-keyword kw">false</span>
-
-        <span class="ruby-identifier">api_version</span>=<span class="ruby-value str">'1.0'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_version</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+        <span class="ruby-ivar">@api_version</span> = <span class="ruby-value str">'1.0'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@api_version</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>    <span class="ruby-comment cmt"># Change default API version</span>
+        <span class="ruby-ivar">@log_file_default</span> = <span class="ruby-value str">&quot;rest.log&quot;</span>
+        <span class="ruby-ivar">@api_url</span> = <span class="ruby-value str">&quot;https://my.rightscale.com/api/acct/&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@api_url</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
 
         <span class="ruby-keyword kw">end</span></pre>
 </body>

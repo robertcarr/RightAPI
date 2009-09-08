@@ -1,0 +1,2 @@
+RestClient.get "https://my.rightscale.com/api/acct/7954/servers", :x_api_version=>"1.0"
+# => 200 OK | application/xml 8429 bytes

@@ -78,12 +78,6 @@
 
   <div id="contextContent">
 
-    <div id="description">
-      <p>
-This is not a complete list of api calls: see API reference
-</p>
-
-    </div>
 
 
    </div>
@@ -92,25 +86,49 @@ This is not a complete list of api calls: see API reference
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000008">deployments_copy</a>&nbsp;&nbsp;
-      <a href="#M000007">deployments_create</a>&nbsp;&nbsp;
-      <a href="#M000009">deployments_delete</a>&nbsp;&nbsp;
-      <a href="#M000010">deployments_show</a>&nbsp;&nbsp;
-      <a href="#M000004">deployments_show_all</a>&nbsp;&nbsp;
-      <a href="#M000005">deployments_start_all</a>&nbsp;&nbsp;
-      <a href="#M000006">deployments_stop_all</a>&nbsp;&nbsp;
-      <a href="#M000012">ebs_create</a>&nbsp;&nbsp;
-      <a href="#M000011">ebs_delete</a>&nbsp;&nbsp;
+      <a href="#M000019">alerts_delete</a>&nbsp;&nbsp;
+      <a href="#M000015">alerts_show</a>&nbsp;&nbsp;
+      <a href="#M000003">arrays_create</a>&nbsp;&nbsp;
+      <a href="#M000005">arrays_delete</a>&nbsp;&nbsp;
+      <a href="#M000006">arrays_show</a>&nbsp;&nbsp;
+      <a href="#M000004">arrays_update</a>&nbsp;&nbsp;
+      <a href="#M000008">credentials_create</a>&nbsp;&nbsp;
+      <a href="#M000010">credentials_delete</a>&nbsp;&nbsp;
+      <a href="#M000007">credentials_show</a>&nbsp;&nbsp;
+      <a href="#M000009">credentials_update</a>&nbsp;&nbsp;
+      <a href="#M000029">deployments_copy</a>&nbsp;&nbsp;
+      <a href="#M000028">deployments_create</a>&nbsp;&nbsp;
+      <a href="#M000030">deployments_delete</a>&nbsp;&nbsp;
+      <a href="#M000031">deployments_show</a>&nbsp;&nbsp;
+      <a href="#M000026">deployments_start_all</a>&nbsp;&nbsp;
+      <a href="#M000027">deployments_stop_all</a>&nbsp;&nbsp;
+      <a href="#M000035">ebs_create</a>&nbsp;&nbsp;
+      <a href="#M000034">ebs_delete</a>&nbsp;&nbsp;
+      <a href="#M000033">ebs_show</a>&nbsp;&nbsp;
+      <a href="#M000016">eips_create</a>&nbsp;&nbsp;
+      <a href="#M000018">eips_delete</a>&nbsp;&nbsp;
+      <a href="#M000017">eips_show</a>&nbsp;&nbsp;
       <a href="#M000002">login</a>&nbsp;&nbsp;
       <a href="#M000001">new</a>&nbsp;&nbsp;
-      <a href="#M000017">run_script</a>&nbsp;&nbsp;
-      <a href="#M000013">server_show</a>&nbsp;&nbsp;
-      <a href="#M000015">server_start</a>&nbsp;&nbsp;
-      <a href="#M000014">server_stop</a>&nbsp;&nbsp;
-      <a href="#M000016">server_update</a>&nbsp;&nbsp;
-      <a href="#M000018">server_update_nickname</a>&nbsp;&nbsp;
-      <a href="#M000003">servers_show_all</a>&nbsp;&nbsp;
-      <a href="#M000019">show_connection</a>&nbsp;&nbsp;
+      <a href="#M000041">run_script</a>&nbsp;&nbsp;
+      <a href="#M000014">s3_create</a>&nbsp;&nbsp;
+      <a href="#M000013">s3_delete</a>&nbsp;&nbsp;
+      <a href="#M000012">s3_show</a>&nbsp;&nbsp;
+      <a href="#M000022">securitygroups_delete</a>&nbsp;&nbsp;
+      <a href="#M000021">securitygroups_show</a>&nbsp;&nbsp;
+      <a href="#M000036">servers_delete</a>&nbsp;&nbsp;
+      <a href="#M000042">servers_name</a>&nbsp;&nbsp;
+      <a href="#M000037">servers_show</a>&nbsp;&nbsp;
+      <a href="#M000039">servers_start</a>&nbsp;&nbsp;
+      <a href="#M000038">servers_stop</a>&nbsp;&nbsp;
+      <a href="#M000040">servers_update</a>&nbsp;&nbsp;
+      <a href="#M000011">servertemplates_show</a>&nbsp;&nbsp;
+      <a href="#M000043">show_connection</a>&nbsp;&nbsp;
+      <a href="#M000020">snapshots_show</a>&nbsp;&nbsp;
+      <a href="#M000024">sshkeys_create</a>&nbsp;&nbsp;
+      <a href="#M000025">sshkeys_delete</a>&nbsp;&nbsp;
+      <a href="#M000023">sshkeys_show</a>&nbsp;&nbsp;
+      <a href="#M000032">status</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -131,7 +149,7 @@ This is not a complete list of api calls: see API reference
       <div class="name-list">
         <table>
         <tr class="top-aligned-row context-row">
-          <td class="context-item-name">account</td>
+          <td class="context-item-name">api_url</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc"></td>
         </tr>
@@ -141,12 +159,17 @@ This is not a complete list of api calls: see API reference
           <td class="context-item-desc"></td>
         </tr>
         <tr class="top-aligned-row context-row">
-          <td class="context-item-name">password</td>
+          <td class="context-item-name">debug</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc"></td>
         </tr>
         <tr class="top-aligned-row context-row">
-          <td class="context-item-name">username</td>
+          <td class="context-item-name">log</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">log_file</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc"></td>
         </tr>
@@ -176,13 +199,13 @@ This is not a complete list of api calls: see API reference
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000008" class="method-detail">
-        <a name="M000008"></a>
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000008.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000008.html');return false;">
-          <span class="method-name">deployments_copy</span><span class="method-args">(id)</span>
+          <a href="RightAPI.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000019.html');return false;">
+          <span class="method-name">alerts_delete</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -190,13 +213,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000007" class="method-detail">
-        <a name="M000007"></a>
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000007.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000007.html');return false;">
-          <span class="method-name">deployments_create</span><span class="method-args">(nickname,description)</span>
+          <a href="RightAPI.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000015.html');return false;">
+          <span class="method-name">alerts_show</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -204,41 +227,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000009" class="method-detail">
-        <a name="M000009"></a>
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000009.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000009.html');return false;">
-          <span class="method-name">deployments_delete</span><span class="method-args">(id)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-        </div>
-      </div>
-
-      <div id="method-M000010" class="method-detail">
-        <a name="M000010"></a>
-
-        <div class="method-heading">
-          <a href="RightAPI.src/M000010.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000010.html');return false;">
-          <span class="method-name">deployments_show</span><span class="method-args">(id)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-        </div>
-      </div>
-
-      <div id="method-M000004" class="method-detail">
-        <a name="M000004"></a>
-
-        <div class="method-heading">
-          <a href="RightAPI.src/M000004.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000004.html');return false;">
-          <span class="method-name">deployments_show_all</span><span class="method-args">()</span>
+          <a href="RightAPI.src/M000003.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000003.html');return false;">
+          <span class="method-name">arrays_create</span><span class="method-args">(params)</span>
           </a>
         </div>
       
@@ -252,7 +247,7 @@ This is not a complete list of api calls: see API reference
         <div class="method-heading">
           <a href="RightAPI.src/M000005.html" target="Code" class="method-signature"
             onclick="popupCode('RightAPI.src/M000005.html');return false;">
-          <span class="method-name">deployments_start_all</span><span class="method-args">(id)</span>
+          <span class="method-name">arrays_delete</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -266,6 +261,160 @@ This is not a complete list of api calls: see API reference
         <div class="method-heading">
           <a href="RightAPI.src/M000006.html" target="Code" class="method-signature"
             onclick="popupCode('RightAPI.src/M000006.html');return false;">
+          <span class="method-name">arrays_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000004.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000004.html');return false;">
+          <span class="method-name">arrays_update</span><span class="method-args">(arrayid,params)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000008.html');return false;">
+          <span class="method-name">credentials_create</span><span class="method-args">(params)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000010.html');return false;">
+          <span class="method-name">credentials_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000007.html');return false;">
+          <span class="method-name">credentials_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000009.html');return false;">
+          <span class="method-name">credentials_update</span><span class="method-args">(id,params)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000029.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000029.html');return false;">
+          <span class="method-name">deployments_copy</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000028.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000028.html');return false;">
+          <span class="method-name">deployments_create</span><span class="method-args">(nickname,description)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000030" class="method-detail">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000030.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000030.html');return false;">
+          <span class="method-name">deployments_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000031" class="method-detail">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000031.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000031.html');return false;">
+          <span class="method-name">deployments_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000026.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000026.html');return false;">
+          <span class="method-name">deployments_start_all</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000027.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000027.html');return false;">
           <span class="method-name">deployments_stop_all</span><span class="method-args">(id)</span>
           </a>
         </div>
@@ -274,12 +423,12 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000012" class="method-detail">
-        <a name="M000012"></a>
+      <div id="method-M000035" class="method-detail">
+        <a name="M000035"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000012.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000012.html');return false;">
+          <a href="RightAPI.src/M000035.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000035.html');return false;">
           <span class="method-name">ebs_create</span><span class="method-args">(params)</span>
           </a>
         </div>
@@ -288,13 +437,69 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000011" class="method-detail">
-        <a name="M000011"></a>
+      <div id="method-M000034" class="method-detail">
+        <a name="M000034"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000011.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000011.html');return false;">
-          <span class="method-name">ebs_delete</span><span class="method-args">(ebsid)</span>
+          <a href="RightAPI.src/M000034.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000034.html');return false;">
+          <span class="method-name">ebs_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000033" class="method-detail">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000033.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000033.html');return false;">
+          <span class="method-name">ebs_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000016.html');return false;">
+          <span class="method-name">eips_create</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000018.html');return false;">
+          <span class="method-name">eips_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000017.html');return false;">
+          <span class="method-name">eips_show</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -316,41 +521,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000017" class="method-detail">
-        <a name="M000017"></a>
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000017.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000017.html');return false;">
+          <a href="RightAPI.src/M000041.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000041.html');return false;">
           <span class="method-name">run_script</span><span class="method-args">(scriptid, serverid)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-        </div>
-      </div>
-
-      <div id="method-M000013" class="method-detail">
-        <a name="M000013"></a>
-
-        <div class="method-heading">
-          <a href="RightAPI.src/M000013.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000013.html');return false;">
-          <span class="method-name">server_show</span><span class="method-args">(serverid)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-        </div>
-      </div>
-
-      <div id="method-M000015" class="method-detail">
-        <a name="M000015"></a>
-
-        <div class="method-heading">
-          <a href="RightAPI.src/M000015.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000015.html');return false;">
-          <span class="method-name">server_start</span><span class="method-args">(serverid)</span>
           </a>
         </div>
       
@@ -364,7 +541,7 @@ This is not a complete list of api calls: see API reference
         <div class="method-heading">
           <a href="RightAPI.src/M000014.html" target="Code" class="method-signature"
             onclick="popupCode('RightAPI.src/M000014.html');return false;">
-          <span class="method-name">server_stop</span><span class="method-args">(serverid)</span>
+          <span class="method-name">s3_create</span><span class="method-args">(name)</span>
           </a>
         </div>
       
@@ -372,13 +549,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000016" class="method-detail">
-        <a name="M000016"></a>
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000016.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000016.html');return false;">
-          <span class="method-name">server_update</span><span class="method-args">(serverid, params)</span>
+          <a href="RightAPI.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000013.html');return false;">
+          <span class="method-name">s3_delete</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -386,13 +563,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000018" class="method-detail">
-        <a name="M000018"></a>
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000018.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000018.html');return false;">
-          <span class="method-name">server_update_nickname</span><span class="method-args">(serverid, name)</span>
+          <a href="RightAPI.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000012.html');return false;">
+          <span class="method-name">s3_show</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -400,13 +577,13 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000003" class="method-detail">
-        <a name="M000003"></a>
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000003.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000003.html');return false;">
-          <span class="method-name">servers_show_all</span><span class="method-args">()</span>
+          <a href="RightAPI.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000022.html');return false;">
+          <span class="method-name">securitygroups_delete</span><span class="method-args">(id)</span>
           </a>
         </div>
       
@@ -414,13 +591,195 @@ This is not a complete list of api calls: see API reference
         </div>
       </div>
 
-      <div id="method-M000019" class="method-detail">
-        <a name="M000019"></a>
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
 
         <div class="method-heading">
-          <a href="RightAPI.src/M000019.html" target="Code" class="method-signature"
-            onclick="popupCode('RightAPI.src/M000019.html');return false;">
+          <a href="RightAPI.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000021.html');return false;">
+          <span class="method-name">securitygroups_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000036" class="method-detail">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000036.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000036.html');return false;">
+          <span class="method-name">servers_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000042.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000042.html');return false;">
+          <span class="method-name">servers_name</span><span class="method-args">(id, name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000037" class="method-detail">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000037.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000037.html');return false;">
+          <span class="method-name">servers_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000039" class="method-detail">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000039.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000039.html');return false;">
+          <span class="method-name">servers_start</span><span class="method-args">(serverid)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000038" class="method-detail">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000038.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000038.html');return false;">
+          <span class="method-name">servers_stop</span><span class="method-args">(serverid)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000040" class="method-detail">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000040.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000040.html');return false;">
+          <span class="method-name">servers_update</span><span class="method-args">(id, params)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000011.html');return false;">
+          <span class="method-name">servertemplates_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000043.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000043.html');return false;">
           <span class="method-name">show_connection</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000020.html');return false;">
+          <span class="method-name">snapshots_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000024.html');return false;">
+          <span class="method-name">sshkeys_create</span><span class="method-args">(keyname)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000025.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000025.html');return false;">
+          <span class="method-name">sshkeys_delete</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000023.html');return false;">
+          <span class="method-name">sshkeys_show</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000032" class="method-detail">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+          <a href="RightAPI.src/M000032.html" target="Code" class="method-signature"
+            onclick="popupCode('RightAPI.src/M000032.html');return false;">
+          <span class="method-name">status</span><span class="method-args">(id)</span>
           </a>
         </div>
       

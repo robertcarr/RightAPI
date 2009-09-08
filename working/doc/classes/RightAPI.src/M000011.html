@@ -5,15 +5,14 @@
 
 <html>
 <head>
-  <title>ebs_delete (RightAPI)</title>
+  <title>servertemplates_show (RightAPI)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 97</span>
-        <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">ebs_delete</span>(<span class="ruby-identifier">ebsid</span>)
-                <span class="ruby-comment cmt"># URL:  DELETE /api/acct/1/ec2_ebs_volumes/1 </span>
-                <span class="ruby-ivar">@apiobject</span>[<span class="ruby-ivar">@api</span>[<span class="ruby-identifier">:ebs</span>]<span class="ruby-operator">+</span><span class="ruby-node">&quot;/#{ebsid}&quot;</span>].<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:x_api_version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'1.0'</span>
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 142</span>
+        <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">servertemplates_show</span>(<span class="ruby-identifier">id</span>)
+                <span class="ruby-identifier">show_item</span>(<span class="ruby-identifier">:servertemplates</span>,<span class="ruby-identifier">id</span>) 
         <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

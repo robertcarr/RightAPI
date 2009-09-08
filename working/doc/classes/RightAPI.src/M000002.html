@@ -10,14 +10,23 @@
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 43</span>
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 55</span>
         <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">login</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">account</span>) 
+
+                <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Debug mode on\n\n&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
+
                 <span class="ruby-ivar">@username</span> = <span class="ruby-identifier">username</span>
                 <span class="ruby-ivar">@password</span> = <span class="ruby-identifier">password</span>
                 <span class="ruby-ivar">@account</span> = <span class="ruby-identifier">account</span>
-                <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">log</span> = <span class="ruby-value str">'rest.log'</span>
-                <span class="ruby-ivar">@apiobject</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Resource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;https://my.rightscale.com/api/acct/#{@account}&quot;</span>,<span class="ruby-ivar">@username</span>,<span class="ruby-ivar">@password</span>)
-                <span class="ruby-ivar">@logged_in</span>=<span class="ruby-keyword kw">true</span>
+                <span class="ruby-ivar">@api_call</span> = <span class="ruby-node">&quot;#{@api_url}#{@account}&quot;</span>
+                <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@log</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;logging=#{@log}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;log_file=#{@log_file}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
+                        <span class="ruby-ivar">@log_file</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">?</span> <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">log</span> = <span class="ruby-node">&quot;#{@log_file_default}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">log</span> = <span class="ruby-node">&quot;#{@log_file}&quot;</span>
+                <span class="ruby-keyword kw">end</span>
+                <span class="ruby-ivar">@apiobject</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Resource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{@api_call}&quot;</span>,<span class="ruby-ivar">@username</span>,<span class="ruby-ivar">@password</span>)
+                <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@apiobject</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
+        
         <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

@@ -1,0 +1,12 @@
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes
+RestClient.get "https://my.rightscale.com/api/acct/7954/ec2_elastic_ips", :x_api_version=>"1.0"
+# => 200 OK | application/xml 288 bytes

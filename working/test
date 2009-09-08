@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+require 'RightAPI'
+require 'crack'
+
+api = RightAPI.new
+api.debug=true
+api.api_version='1.0'

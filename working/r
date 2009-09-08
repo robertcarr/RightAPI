@@ -1,0 +1,9 @@
+digraph RS {
+
+server1 -> test1;
+server1 -> test2;
+
+server1 [shapefile="images.jpg" label="" border=none];
+
+}
+

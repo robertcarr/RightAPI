@@ -1,20 +1,33 @@
 #!/usr/bin/ruby
+# Copyright 2009 RightScale, Inc.
+# http://www.rightscale.com
+#
+# Ruby API Wrapper for RightScale API functions
+# Class: RightAPI
+#
+# Allows easier access to the RightScale API within your own ruby code and
+# Has limited debugging & error handling at this point.
+# 
+# Requires rest_client Ruby gem available online.
+# 
+# Example:
+# api = RightAPI.new	
+# api.login(username, password, account)
+# api.server_show("all")	# displays all servers in your account
+# api.server_show(serverid)	# displays server by id
+# api.server_name(serverid, "Servers New Name") 	# updates server name
+# api.log = true	# turns on REST log file
 
-##############################################################################
-##############################################################################
-
-require 'rubygems'   # not required if ruby >= 1.9
-
-#####
-## This is not a complete list of api calls: see API reference
-#####
+require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
 class RightAPI
 require 'rest_client'
 
 @apiobject = Object.new
 	
-attr_accessor :username, :password, :account, :api_version
+attr_accessor :api_version, :log, :debug, :api_url, :log_file
+
+
 
 	def initialize
 
@@ -31,116 +44,288 @@ attr_accessor :username, :password, :account, :api_version
 			:credentials		=> "credentials",
 			:macros			=> "macros",
 			:servertemplates	=> "server_templates",
-			:rightscripts		=> "right_scripts"
+			:rightscripts		=> "right_scripts",
+			:status			=> "statuses"
 		}
 
-		@logged_in=false
-
-	api_version='1.0' if api_version == nil
+	@api_version = '1.0' if @api_version == nil	# Change default API version
+	@log_file_default = "rest.log"
+	@api_url = "https://my.rightscale.com/api/acct/" if @api_url == nil
 
 	end
 	
 	def	login(username, password, account) 
+		puts "Debug mode on\n\n" if @debug
+
 		@username = username
 		@password = password
 		@account = account
-		RestClient.log = 'rest.log'
-		@apiobject = RestClient::Resource.new("https://my.rightscale.com/api/acct/#{@account}",@username,@password)
-		@logged_in=true
+		@api_call = "#{@api_url}#{@account}"
+		unless @log.nil?
+			puts "logging=#{@log}" if @debug
+			puts "log_file=#{@log_file}" if @debug
+			@log_file == nil ? RestClient.log = "#{@log_file_default}" : RestClient.log = "#{@log_file}"
+		end
+		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
+		
+		rescue => e
+		puts e.message	
 	end
 
-	def	servers_show_all
-		# Get /api/acct/1/servers		
-		@apiobject[@api[:servers]].get :x_api_version => '1.0'
+	def 	debugger
+		caller[0][/`([^']*)'/, 1]
+	end
+
+	def	show_all(obj)
+		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		rescue => e
+		puts e.message
+	end
 	
+	def	show_item(obj,id)
+		if id.downcase == "all" then
+			show_all(obj)
+		else
+			req=@api[obj].to_s + "/#{id}"
+			@apiobject[req].get :x_api_version => "#{@api_version}"
+		end
+
+		rescue => e
+		puts e.message		
+
 	end
 
-	def	deployments_show_all
-		@apiobject[@api[:deployments]].get :x_api_version => '1.0'
+	def 	post_string(req, params)
+		@apiobject[req].post params, :x_api_version => "#{@api_version}"
+		puts params.inspect if @debug
+
+		rescue => e
+		puts e.message	
+	end
+
+	def	delete_item(obj,id)
+		req=@api[obj].to_s + "/#{id}"
+		@apiobject[req].delete :x_api_version => "#{@api_version}"
+		
+		rescue => e	
+		puts e.message
+	end
+
+	def 	create_item(obj, params)
+		@apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		puts params.inspect if @debug
+		
+		rescue=> e
+		puts e.message
+	end
+
+	def	update_item(obj, id, params)
+		@apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		puts params.inpsect if @debug
+
+		rescue=> e
+		puts e.message
+	end
+
+	def	arrays_create(params)
+		create_item(:arrays, params)
+	end
+	
+	def	arrays_update(arrayid,params)
+		update_item(:arrays, arrayid, params)
+	end
+	
+	def	arrays_delete(id)
+		delete_item(:arrays, id)
+	end
+	
+	def	arrays_show(id)
+		show_item(:arrays,id) 
+	end
+	
+	def	credentials_show(id)
+		show_item(:credentials,id) 
+	end
+	
+	def	credentials_create(params)
+		create_item(:credentials, params)
+	end
+	
+	def	credentials_update(id,params)
+		update_item(:credentials.to_s, id, params)
+	end
+	
+	def	credentials_delete(id)
+		delete_item(:credentials, id)
+	end
+	
+	def	servertemplates_show(id)
+		show_item(:servertemplates,id) 
+	end
+	
+	def	s3_show(id)
+		show_item(:s3,id) 
+	end
+	
+	def	s3_delete(id)
+		delete_item(:s3, id)
+	end
+	
+	def	s3_create(name)
+		params = { "s3_bucket[name]" => name }
+		create_item(:s3, params)
+	end
+	
+	def	alerts_show(id)
+		show_item(:alerts,id) 
+	end
+
+	def	eips_create
+		params = {}
+		create_item(:eips, params)
+	end
+
+	def	eips_show(id)
+		show_item(:eips,id) 
+	end
+
+	def	eips_delete(id)
+		delete_item(:eips, id)
+	end
+
+	def	alerts_delete(id)
+		delete_item(:alerts, id)
+	end
+	
+	def	snapshots_show(id)
+		show_item(:snapshots,id) 	
+	end	
+
+	def	securitygroups_show(id)
+		show_item(:securitygroups,id) 
+	end
+	
+	def	securitygroups_delete(id)
+		delete_item(:securitygroups, id)
+	end
+	
+	def	sshkeys_show(id)
+		show_item(:sshkeys,id) 
+	end
+	
+	
+	def	sshkeys_create(keyname)
+		params = { "ec2_ssh_key[aws_key_name]" => keyname }
+		create_item(:sshkeys, params)
+	end
+	
+	def	sshkeys_delete(id)
+		delete_item(:sshkeys, id)
 	end
 	
 	def	deployments_start_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/start_all"].post params ,:x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/start_all"
+		post_string(req, params)
 	end
 
 	def	deployments_stop_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/stop_all"].post params, :x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/stop_all"
+		post_string(req, params)
 	end
 
 	def	deployments_create(nickname,description)
 		#URL: POST /api/acct/1/deployments
 		params = { "deployments[nickname]" => nickname, "deployments[description]" => description }
-		@apiobject[@api[:deployments]].post params, :x_api_version => '1.0'
+		create_item(:deployments, params)
 	end
 
 	def	deployments_copy(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		@apiobject[@api[:deployments]+"/#{id}/duplicate"].post params, :x_api_version => '1.0'
+		req=:deployments.to_s + "/#{id}/duplicate"
+		post_string(req, params)
 	end
 
 	def	deployments_delete(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
-		@apiobject[@api[:deployments]+"/#{id}"].delete :x_api_version => '1.0'
+                #URL: POST /api/acct/1/deployments/000
+		delete_item(:deployments, id)
 	end
 
 	def	deployments_show(id)
                 #URL: GET /api/acct/1/deployments/1
-		@apiobject[@api[:deployments]+"/#{id}"].get :x_api_version => '1.0'
+		show_item(:deployments,id)
+	end
 
+	def	status(id)
+		#URL:  GET /api/acct/1/statuses/000
+		show_item(:status, id)
+	end
+
+	def	ebs_show(id)
+		show_item(:ebs,id)
 	end
 	
-	def	ebs_delete(ebsid)
+	def	ebs_delete(id)
 		# URL:  DELETE /api/acct/1/ec2_ebs_volumes/1 
-		@apiobject[@api[:ebs]+"/#{ebsid}"].delete :x_api_version => '1.0'
+		delete_item(:ebs, id)
 	end
 
 	def	ebs_create(params) 
 		#URL: POST /api/acct/1/ec2_ebs_volumes
-		@apiobject[@api[:ebs]].post params, :x_api_version => '1.0'
+		create_item(:ebs, params)
 	end
 
-	def 	server_show(serverid)
-		@apiobject[@api[:servers]+"/#{serverid}"].get :x_api_version => '1.0'
+	def	servers_delete(id)
+		delete_item(:servers,id)
 	end
 
-	def	server_stop(serverid)
+	def 	servers_show(id)
+		show_item(:servers,id) 		
+	end
+
+	def	servers_stop(serverid)
 		params = {}
-		@apiobject[@api[:servers]+"/#{serverid}/stop"].post params, :x_api_version => '1.0'	
+		req=:servers.to_s + "/#{serverid}/stop"
+		post_string(req, params)
 	end		
 
-	def	server_start(serverid)
+	def	servers_start(serverid)
 		params = {}
-		@apiobject[@api[:servers]+"/#{serverid}/start"].post params, :x_api_version => '1.0'	
+		req=:servers.to_s + "/#{serverid}/start"
+		post_string(req, params)
 	end		
 
-	def	server_update(serverid, params)
-		@apiobject[@api[:servers]+"/#{serverid}"].put params, :x_api_version => '1.0'
+	def	servers_update(id, params)
+		update_item(id, params)
 	end
 
 	def 	run_script(scriptid, serverid)
-		params = { "right_script" => "#{scriptid}" }
-		puts params.inspect
 		#URL: POST /api/acct/1/servers/000/run_script
-	
-		@apiobject[@api[:servers]+"/#{serverid}/run_script"].post params, :x_api_version => '1.0'
-		
+		params = { "right_script" => "#{scriptid}" }
+		req=:servers.to_s + "/#{serverid}/run_script"
+		post_string(req, params)	
 	end
 
-	def	server_update_nickname(serverid, name)
-		params = { "server[nickname]"	=> "#{name}" }	 
-		@apiobject[@api[:servers]+"/#{serverid}"].put params, :x_api_version => '1.0'
+	def	servers_name(id, name)
+		params = { "server[nickname]"	=> name }	 
+		update_item(:servers.to_s,id, params)
 	end
 	
 	def 	show_connection
 		puts @apiobject.inspect
 	end
 	
-		
-end
+	def	myerrors
+		rescue SystemError
+			puts "error"
+	end
 
+private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
+private :debugger
+
+end
 

@@ -5,14 +5,15 @@
 
 <html>
 <head>
-  <title>server_update (RightAPI)</title>
+  <title>eips_create (RightAPI)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 121</span>
-        <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">server_update</span>(<span class="ruby-identifier">serverid</span>, <span class="ruby-identifier">params</span>)
-                <span class="ruby-ivar">@apiobject</span>[<span class="ruby-ivar">@api</span>[<span class="ruby-identifier">:servers</span>]<span class="ruby-operator">+</span><span class="ruby-node">&quot;/#{serverid}&quot;</span>].<span class="ruby-identifier">put</span> <span class="ruby-identifier">params</span>, <span class="ruby-identifier">:x_api_version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'1.0'</span>
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 163</span>
+        <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">eips_create</span>
+                <span class="ruby-identifier">params</span> = {}
+                <span class="ruby-identifier">create_item</span>(<span class="ruby-identifier">:eips</span>, <span class="ruby-identifier">params</span>)
         <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>
