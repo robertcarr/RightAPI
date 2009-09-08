@@ -33,6 +33,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	@api =	{	:servers		=> "servers" ,
 			:deployments		=> "deployments",
+			:ebsaction		=> "component_ec2_ebs_volumes",
 			:ebs			=> "ec2_ebs_volumes",
 			:snapshots		=> "ec2_ebs_snapshots",
 			:alerts			=> "alert_specs",
@@ -128,6 +129,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	arrays_create(params)
+
 		create_item(:arrays, params)
 	end
 	
@@ -263,6 +265,11 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def	status(id)
 		#URL:  GET /api/acct/1/statuses/000
 		show_item(:status, id)
+	end
+
+	def
+		ebs_attach(params)
+		create_item(:ebsaction, params)	
 	end
 
 	def	ebs_show(id)
