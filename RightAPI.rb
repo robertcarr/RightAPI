@@ -9,14 +9,19 @@
 # Has limited debugging & error handling at this point.
 # 
 # Requires rest_client Ruby gem available online.
-# 
+# try 'gem install rest-client'
+#
 # Example:
 # api = RightAPI.new	
 # api.login(username, password, account)
-# api.server_show("all")	# displays all servers in your account
-# api.server_show(serverid)	# displays server by id
-# api.server_name(serverid, "Servers New Name") 	# updates server name
+# api.servers_show("all")	# displays all servers in your account
+# api.servers_show(serverid)	# displays server by id
+# api.servers_name(serverid, "Servers New Name") 	# updates server name
 # api.log = true	# turns on REST log file
+# 
+# All methods try to follow the xxxx_update, xxxx_show, xxxx_delete model.
+# Where 'xxxx' is the API call such as servers, deployments, sshkeys, etc.
+# 
 
 require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
