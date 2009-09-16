@@ -9,8 +9,7 @@
 # Has limited debugging & error handling at this point.
 # 
 # Requires rest_client Ruby gem available online.
-# try 'gem install rest-client'
-#
+# 
 # Example:
 # api = RightAPI.new	
 # api.login(username, password, account)
@@ -18,10 +17,15 @@
 # api.servers_show(serverid)	# displays server by id
 # api.servers_name(serverid, "Servers New Name") 	# updates server name
 # api.log = true	# turns on REST log file
-# 
-# All methods try to follow the xxxx_update, xxxx_show, xxxx_delete model.
-# Where 'xxxx' is the API call such as servers, deployments, sshkeys, etc.
-# 
+# api.debug = true	# limited debugging
+#
+
+
+
+
+
+
+
 
 require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
@@ -38,7 +42,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	@api =	{	:servers		=> "servers" ,
 			:deployments		=> "deployments",
-			:ebsaction		=> "component_ec2_ebs_volumes",
 			:ebs			=> "ec2_ebs_volumes",
 			:snapshots		=> "ec2_ebs_snapshots",
 			:alerts			=> "alert_specs",
@@ -51,7 +54,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:macros			=> "macros",
 			:servertemplates	=> "server_templates",
 			:rightscripts		=> "right_scripts",
-			:status			=> "statuses"
+			:status			=> "statuses",
+			:getsketchydata		=> "get_sketchy_data"	
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -89,7 +93,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	show_item(obj,id)
-		if id.downcase == "all" then
+		if id.to_s.downcase == "all" then
 			show_all(obj)
 		else
 			req=@api[obj].to_s + "/#{id}"
@@ -107,6 +111,13 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 		rescue => e
 		puts e.message	
+	end
+
+	def	get_string(obj)
+		@apiobject[obj].get :x_api_version => "#{@api_version}"
+	
+		rescue => e
+		puts e.message
 	end
 
 	def	delete_item(obj,id)
@@ -134,7 +145,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	arrays_create(params)
-
 		create_item(:arrays, params)
 	end
 	
@@ -233,14 +243,14 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def	deployments_start_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/start_all"
+		req=@api[:deployments] + "/#{id}/start_all"
 		post_string(req, params)
 	end
 
 	def	deployments_stop_all(id)
                 #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/stop_all"
+		req=@api[:deployments] + "/#{id}/stop_all"
 		post_string(req, params)
 	end
 
@@ -272,11 +282,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		show_item(:status, id)
 	end
 
-	def
-		ebs_attach(params)
-		create_item(:ebsaction, params)	
-	end
-
 	def	ebs_show(id)
 		show_item(:ebs,id)
 	end
@@ -301,13 +306,13 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	servers_stop(serverid)
 		params = {}
-		req=:servers.to_s + "/#{serverid}/stop"
+		req=@api[:servers] + "/#{serverid}/stop"
 		post_string(req, params)
 	end		
 
 	def	servers_start(serverid)
 		params = {}
-		req=:servers.to_s + "/#{serverid}/start"
+		req=@api[:servers] + "/#{serverid}/start"
 		post_string(req, params)
 	end		
 
@@ -318,26 +323,27 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def 	run_script(scriptid, serverid)
 		#URL: POST /api/acct/1/servers/000/run_script
 		params = { "right_script" => "#{scriptid}" }
-		req=:servers.to_s + "/#{serverid}/run_script"
+		req=@api[:servers] + "/#{serverid}/run_script"
 		post_string(req, params)	
 	end
 
 	def	servers_name(id, name)
 		params = { "server[nickname]"	=> name }	 
-		update_item(:servers.to_s,id, params)
+		update_item(@api[:servers],id, params)
 	end
-	
+
+	def	servers_getsketchydata(id)
+		req = @api[:servers] + "/#{id}/" + @api[:getsketchydata]
+		get_string(req)
+	end
+
 	def 	show_connection
 		puts @apiobject.inspect
 	end
 	
-	def	myerrors
-		rescue SystemError
-			puts "error"
-	end
-
+	
 private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
-private :debugger
+private :debugger, :get_string
 
 end
 
