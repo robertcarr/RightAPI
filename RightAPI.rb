@@ -55,7 +55,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:servertemplates	=> "server_templates",
 			:rightscripts		=> "right_scripts",
 			:status			=> "statuses",
-			:getsketchydata		=> "get_sketchy_data"	
+			:getsketchydata		=> "get_sketchy_data",
+			:attachtoserver		=> "component_ec2_ebs_volumes",
+			:attachvolume		=> "attach_volume"
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -296,6 +298,11 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		create_item(:ebs, params)
 	end
 
+	def	ebs_attach(params)
+		#URL: POST /api/acct/1/component_ec2_ebs_volumes
+		create_item(:attachtoserver, params)
+	end 
+
 	def	servers_delete(id)
 		delete_item(:servers,id)
 	end
@@ -315,6 +322,11 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		req=@api[:servers] + "/#{serverid}/start"
 		post_string(req, params)
 	end		
+
+	def	servers_attach_volume(id,params)
+		req = @api[:servers] + "/#{id}/" + @api[:attachvolume]
+		post_string(req, params)
+	end
 
 	def	servers_update(id, params)
 		update_item(id, params)
