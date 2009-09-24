@@ -58,7 +58,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:getsketchydata		=> "get_sketchy_data",
 			:attachtoserver		=> "component_ec2_ebs_volumes",
 			:attachvolume		=> "attach_volume",
-			:instances		=> "instances"
+			:instances		=> "instances",
+			:settings		=> "settings",
+			:stopall		=> "stop_all,
+			:startall		=> "start_all",
+			:duplicate		=> "duplicate",
+			:runscript		=> "run_script"
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -93,6 +98,14 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
 		rescue => e
 		puts e.message
+	end
+
+# Creates a common RightScale REST string
+# <obj1> + "/resourceID/ " + <obj2>
+# like : /servers/0000/settings
+
+	def 	makestring(obj1, id, obj2)
+		@api(obj1) + "/#{id}/" + obj2
 	end
 	
 	def	show_item(obj,id)
@@ -160,8 +173,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	arrays_instances(id)
-		obj = @api[:arrays]+"/#{id}/" + @api[:instances]
-		get_string(obj)
+		get_string(makestring(:arrays, id, :instances))
 	end
 		
 	
@@ -229,7 +241,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	securitygroups_show(id)
 		show_item(:securitygroups,id) 
-	end
+	nd
 	
 	def	securitygroups_delete(id)
 		delete_item(:securitygroups, id)
@@ -250,44 +262,34 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	deployments_start_all(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=@api[:deployments] + "/#{id}/start_all"
-		post_string(req, params)
+		post_string(makestring(:deployments, id, :startall), params)
 	end
 
 	def	deployments_stop_all(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=@api[:deployments] + "/#{id}/stop_all"
-		post_string(req, params)
+		post_string(makestring(:deployments,id,:stopall), params)
 	end
 
 	def	deployments_create(nickname,description)
-		#URL: POST /api/acct/1/deployments
 		params = { "deployments[nickname]" => nickname, "deployments[description]" => description }
 		create_item(:deployments, params)
 	end
 
 	def	deployments_copy(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/duplicate"
-		post_string(req, params)
+		post_string(makestring(:deployments, id, :duplicate), params)
 	end
 
 	def	deployments_delete(id)
-                #URL: POST /api/acct/1/deployments/000
 		delete_item(:deployments, id)
 	end
 
 	def	deployments_show(id)
-                #URL: GET /api/acct/1/deployments/1
 		show_item(:deployments,id)
 	end
 
 	def	status(id)
-		#URL:  GET /api/acct/1/statuses/000
 		show_item(:status, id)
 	end
 
@@ -296,17 +298,14 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	ebs_delete(id)
-		# URL:  DELETE /api/acct/1/ec2_ebs_volumes/1 
 		delete_item(:ebs, id)
 	end
 
 	def	ebs_create(params) 
-		#URL: POST /api/acct/1/ec2_ebs_volumes
 		create_item(:ebs, params)
 	end
 
 	def	ebs_attach(params)
-		#URL: POST /api/acct/1/component_ec2_ebs_volumes
 		create_item(:attachtoserver, params)
 	end 
 
@@ -318,21 +317,22 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		show_item(:servers,id) 		
 	end
 
+	def	servers_settings(id)
+		get_string(makestring(:servers,id,:settings))
+	end
+
 	def	servers_stop(serverid)
 		params = {}
-		req=@api[:servers] + "/#{serverid}/stop"
-		post_string(req, params)
+		post_string(makestring(:servers,id,:stop), params)
 	end		
 
 	def	servers_start(serverid)
 		params = {}
-		req=@api[:servers] + "/#{serverid}/start"
-		post_string(req, params)
+		post_string(makestring(:servers,id,:start), params)
 	end		
 
 	def	servers_attach_volume(id,params)
-		req = @api[:servers] + "/#{id}/" + @api[:attachvolume]
-		post_string(req, params)
+		post_string(makestring(:servers,id,:attachvolume), params)
 	end
 
 	def	servers_update(id, params)
@@ -340,10 +340,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def 	run_script(scriptid, serverid)
-		#URL: POST /api/acct/1/servers/000/run_script
 		params = { "right_script" => "#{scriptid}" }
-		req=@api[:servers] + "/#{serverid}/run_script"
-		post_string(req, params)	
+		post_string(makestring(:servers,id,:runscript), params)	
 	end
 
 	def	servers_name(id, name)
@@ -352,8 +350,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	servers_getsketchydata(id)
-		req = @api[:servers] + "/#{id}/" + @api[:getsketchydata]
-		get_string(req)
+		get_string(makestring(:servers,id,:getsketchydata))
 	end
 
 	def 	show_connection
@@ -362,7 +359,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	
 	
 private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
-private :debugger, :get_string
+private :debugger, :get_string, :makestring
 
 end
 
