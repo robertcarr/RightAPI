@@ -1,0 +1,87 @@
+#!/usr/bin/ruby
+
+require 'RightAPI'
+require 'crack'
+
+
+api = RightAPI.new
+api.login("robert@rightscale.com","K3yst0n3",15900)
+api.log=true
+
+
+
+servers = {}
+settings = {}
+
+
+###
+# Grab all known servers in the account & chew the data
+###
+
+xml= Crack::XML.parse( api.servers_show("all"))
+xml['servers'].each { | server |
+
+	serverid = server['href'].scan(/([0-9]+)$/) unless server['href'].nil?
+	deploymentid = server['deployment_href'].scan(/([0-9]+)$/)
+
+	servers["#{serverid}"] = { :nickname => server['nickname'], :serveruri => server['href'],
+				   :deploymentid => "#{deploymentid}",  :deploymenturi => server['deployment_href'],
+				   :state => server['state'] 
+				 }
+}
+
+
+
+###
+# Grab details on each individual server
+## 
+h = {}
+	servers.each_key { | serverid |
+		xml = Crack::XML.parse(api.servers_settings("#{serverid}"))
+#		puts "Retrieving Server #{serverid}"
+		xml['settings'].each { | x |
+
+			case x[0]
+			 	when "ec2_instance_type" then h[:instancetype] = "#{x[1]}"
+				when "aws_platform" then h[:platform] = "#{x[1]}"
+				when "dns_name" then h[:publicdns] = "#{x[1]}"
+				when "private_dns_name" then h[:privateip] = "#{x[1]}"
+			end
+
+			servers["#{serverid}"].merge!(h)	
+			#puts h.inspect
+		}
+	#	puts servers["#{serverid}"].inspect
+	}
+
+### 
+# Grab deployment data
+###
+
+deployments = {}
+
+	xml = Crack::XML.parse(api.deployments_show("all"))
+	xml['deployments'].each { | deployment | 
+		deployid = deployment['href'].scan(/([0-9]+)$/)
+		deployments["#{deployid}"] = deployment['nickname']
+	}
+ 
+
+h = {}
+servers.each_key { | serverid | 
+
+id = servers["#{serverid}"][:deploymentid]
+h = { :deploymentname => deployments["#{id}"] }
+
+servers["#{serverid}"].merge!(h)
+
+}
+
+
+
+servers.each { | srv , v |
+
+	puts "Deployment [#{v[:deploymentname]}] #{v[:nickname]} #{v[:privateip]}"
+
+}			
+
