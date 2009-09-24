@@ -60,7 +60,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:attachvolume		=> "attach_volume",
 			:instances		=> "instances",
 			:settings		=> "settings",
-			:stopall		=> "stop_all,
+			:stopall		=> "stop_all",
 			:startall		=> "start_all",
 			:duplicate		=> "duplicate",
 			:runscript		=> "run_script"
@@ -100,12 +100,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts e.message
 	end
 
-# Creates a common RightScale REST string
-# <obj1> + "/resourceID/ " + <obj2>
-# like : /servers/0000/settings
+	# Creates a common RightScale REST string
+	# <obj1> + "/resourceID/ " + <obj2>
+	# like : /servers/0000/settings
 
 	def 	makestring(obj1, id, obj2)
-		@api(obj1) + "/#{id}/" + obj2
+		@api[obj1] + "/#{id}/" + @api[obj2]
 	end
 	
 	def	show_item(obj,id)
@@ -241,7 +241,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	securitygroups_show(id)
 		show_item(:securitygroups,id) 
-	nd
+ 	end
 	
 	def	securitygroups_delete(id)
 		delete_item(:securitygroups, id)
