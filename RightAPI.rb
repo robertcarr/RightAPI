@@ -57,7 +57,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:status			=> "statuses",
 			:getsketchydata		=> "get_sketchy_data",
 			:attachtoserver		=> "component_ec2_ebs_volumes",
-			:attachvolume		=> "attach_volume"
+			:attachvolume		=> "attach_volume",
+			:instances		=> "instances"
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -157,6 +158,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def	arrays_delete(id)
 		delete_item(:arrays, id)
 	end
+	
+	def	arrays_instances(id)
+		obj = @api[:arrays]+"/#{id}/" + @api[:instances]
+		get_string(obj)
+	end
+		
 	
 	def	arrays_show(id)
 		show_item(:arrays,id) 
