@@ -10,9 +10,8 @@
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 55</span>
+  <pre><span class="ruby-comment cmt"># File RightAPI.rb, line 57</span>
         <span class="ruby-keyword kw">def</span>    <span class="ruby-identifier">login</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">account</span>) 
-
                 <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Debug mode on\n\n&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
 
                 <span class="ruby-ivar">@username</span> = <span class="ruby-identifier">username</span>
@@ -25,8 +24,9 @@
                         <span class="ruby-ivar">@log_file</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">?</span> <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">log</span> = <span class="ruby-node">&quot;#{@log_file_default}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">log</span> = <span class="ruby-node">&quot;#{@log_file}&quot;</span>
                 <span class="ruby-keyword kw">end</span>
                 <span class="ruby-ivar">@apiobject</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Resource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{@api_call}&quot;</span>,<span class="ruby-ivar">@username</span>,<span class="ruby-ivar">@password</span>)
-                <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@apiobject</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@debug</span>
-        
+                
+                <span class="ruby-keyword kw">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>        
         <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

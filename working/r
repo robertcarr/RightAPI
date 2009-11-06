@@ -1,9 +1,5 @@
-digraph RS {
+#!/usr/bin/ruby
 
-server1 -> test1;
-server1 -> test2;
+h = { :rob	=> "is_here" }
 
-server1 [shapefile="images.jpg" label="" border=none];
-
-}
-
+puts h[:rob]

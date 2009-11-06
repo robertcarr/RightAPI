@@ -1,8 +1,19 @@
 #!/usr/bin/ruby
 
 require 'RightAPI'
-require 'crack'
+
 
 api = RightAPI.new
-api.debug=true
-api.api_version='1.0'
+api.log="true"
+
+api.login("robert@rightscale.com","K3yst0n3",7954)
+
+params = { "ec2_ebs_volume[nickname]" => "RC:testAPI",
+	   "ec2_ebs_volume[description]" => "RC: Desc",
+	   "ec2_ebs_volume[ec2_availability_zone]" => "us-east-1a",
+	   "ec2_ebs_volume[aws_size]" => "1"
+}
+
+api.servers_show("all")
+puts api.headers[:content_type]
+

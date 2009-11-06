@@ -13,10 +13,14 @@
 # Example:
 # api = RightAPI.new	
 # api.login(username, password, account)
-# api.server_show("all")	# displays all servers in your account
-# api.server_show(serverid)	# displays server by id
-# api.server_name(serverid, "Servers New Name") 	# updates server name
+# api.servers_show("all")	# displays all servers in your account
+# api.servers_show(serverid)	# displays server by id
+# api.servers_name(serverid, "Servers New Name") 	# updates server name
 # api.log = true	# turns on REST log file
+# api.debug = true	# limited debugging
+#
+
+
 
 require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
@@ -24,7 +28,8 @@ class RightAPI
 require 'rest_client'
 
 @apiobject = Object.new
-	
+@apiheader = {}
+
 attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 
@@ -45,7 +50,16 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:macros			=> "macros",
 			:servertemplates	=> "server_templates",
 			:rightscripts		=> "right_scripts",
-			:status			=> "statuses"
+			:status			=> "statuses",
+			:getsketchydata		=> "get_sketchy_data",
+			:attachtoserver		=> "component_ec2_ebs_volumes",
+			:attachvolume		=> "attach_volume",
+			:instances		=> "instances",
+			:settings		=> "settings",
+			:stopall		=> "stop_all",
+			:startall		=> "start_all",
+			:duplicate		=> "duplicate",
+			:runscript		=> "run_script"
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -67,9 +81,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			@log_file == nil ? RestClient.log = "#{@log_file_default}" : RestClient.log = "#{@log_file}"
 		end
 		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
-		
 		rescue => e
 		puts e.message	
+	end
+
+	def 	headers
+		@apiheader
 	end
 
 	def 	debugger
@@ -77,17 +94,30 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	show_all(obj)
-		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		reply = @apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		rescue => e
 		puts e.message
 	end
+
+	# Creates a common RightScale REST string
+	# <obj1> + "/resourceID/ " + <obj2>
+	# like : /servers/0000/settings
+
+	def 	makestring(obj1, id, obj2)
+		@api[obj1] + "/#{id}/" + @api[obj2]
+	end
 	
 	def	show_item(obj,id)
-		if id.downcase == "all" then
+		if id.to_s.downcase == "all" then
 			show_all(obj)
 		else
 			req=@api[obj].to_s + "/#{id}"
-			@apiobject[req].get :x_api_version => "#{@api_version}"
+			reply = @apiobject[req].get :x_api_version => "#{@api_version}"
+			@apiheader = reply.headers
+			reply
 		end
 
 		rescue => e
@@ -96,23 +126,39 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def 	post_string(req, params)
-		@apiobject[req].post params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[req].post params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		puts params.inspect if @debug
 
 		rescue => e
 		puts e.message	
 	end
 
+	def	get_string(obj)
+		reply = @apiobject[obj].get :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply	
+	
+		rescue => e
+		puts e.message
+	end
+
 	def	delete_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
-		@apiobject[req].delete :x_api_version => "#{@api_version}"
+		reply = @apiobject[req].delete :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
 		
 		rescue => e	
 		puts e.message
 	end
 
 	def 	create_item(obj, params)
-		@apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+	        reply	
 		puts params.inspect if @debug
 		
 		rescue=> e
@@ -120,7 +166,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	update_item(obj, id, params)
-		@apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		puts params.inpsect if @debug
 
 		rescue=> e
@@ -138,6 +187,11 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def	arrays_delete(id)
 		delete_item(:arrays, id)
 	end
+	
+	def	arrays_instances(id)
+		get_string(makestring(:arrays, id, :instances))
+	end
+		
 	
 	def	arrays_show(id)
 		show_item(:arrays,id) 
@@ -203,7 +257,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	securitygroups_show(id)
 		show_item(:securitygroups,id) 
-	end
+ 	end
 	
 	def	securitygroups_delete(id)
 		delete_item(:securitygroups, id)
@@ -224,44 +278,34 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	deployments_start_all(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/start_all"
-		post_string(req, params)
+		post_string(makestring(:deployments, id, :startall), params)
 	end
 
 	def	deployments_stop_all(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/stop_all"
-		post_string(req, params)
+		post_string(makestring(:deployments,id,:stopall), params)
 	end
 
 	def	deployments_create(nickname,description)
-		#URL: POST /api/acct/1/deployments
 		params = { "deployments[nickname]" => nickname, "deployments[description]" => description }
 		create_item(:deployments, params)
 	end
 
 	def	deployments_copy(id)
-                #URL: POST /api/acct/1/deployments/000/start_all
 		params = {}
-		req=:deployments.to_s + "/#{id}/duplicate"
-		post_string(req, params)
+		post_string(makestring(:deployments, id, :duplicate), params)
 	end
 
 	def	deployments_delete(id)
-                #URL: POST /api/acct/1/deployments/000
 		delete_item(:deployments, id)
 	end
 
 	def	deployments_show(id)
-                #URL: GET /api/acct/1/deployments/1
 		show_item(:deployments,id)
 	end
 
 	def	status(id)
-		#URL:  GET /api/acct/1/statuses/000
 		show_item(:status, id)
 	end
 
@@ -270,14 +314,16 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 	
 	def	ebs_delete(id)
-		# URL:  DELETE /api/acct/1/ec2_ebs_volumes/1 
 		delete_item(:ebs, id)
 	end
 
 	def	ebs_create(params) 
-		#URL: POST /api/acct/1/ec2_ebs_volumes
 		create_item(:ebs, params)
 	end
+
+	def	ebs_attach(params)
+		create_item(:attachtoserver, params)
+	end 
 
 	def	servers_delete(id)
 		delete_item(:servers,id)
@@ -287,45 +333,49 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		show_item(:servers,id) 		
 	end
 
+	def	servers_settings(id)
+		get_string(makestring(:servers,id,:settings))
+	end
+
 	def	servers_stop(serverid)
 		params = {}
-		req=:servers.to_s + "/#{serverid}/stop"
-		post_string(req, params)
+		post_string(makestring(:servers,id,:stop), params)
 	end		
 
 	def	servers_start(serverid)
 		params = {}
-		req=:servers.to_s + "/#{serverid}/start"
-		post_string(req, params)
+		post_string(makestring(:servers,id,:start), params)
 	end		
+
+	def	servers_attach_volume(id,params)
+		post_string(makestring(:servers,id,:attachvolume), params)
+	end
 
 	def	servers_update(id, params)
 		update_item(id, params)
 	end
 
 	def 	run_script(scriptid, serverid)
-		#URL: POST /api/acct/1/servers/000/run_script
 		params = { "right_script" => "#{scriptid}" }
-		req=:servers.to_s + "/#{serverid}/run_script"
-		post_string(req, params)	
+		post_string(makestring(:servers,id,:runscript), params)	
 	end
 
 	def	servers_name(id, name)
 		params = { "server[nickname]"	=> name }	 
-		update_item(:servers.to_s,id, params)
+		update_item(@api[:servers],id, params)
 	end
-	
+
+	def	servers_getsketchydata(id)
+		get_string(makestring(:servers,id,:getsketchydata))
+	end
+
 	def 	show_connection
 		puts @apiobject.inspect
 	end
 	
-	def	myerrors
-		rescue SystemError
-			puts "error"
-	end
-
+	
 private :show_all, :show_item, :delete_item, :post_string, :create_item, :update_item
-private :debugger
+private :debugger, :get_string, :makestring
 
 end
 

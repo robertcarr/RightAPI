@@ -22,18 +22,14 @@
 
 
 
-
-
-
-
-
 require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
 class RightAPI
 require 'rest_client'
 
 @apiobject = Object.new
-	
+@apiheader = {}
+
 attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 
@@ -85,9 +81,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			@log_file == nil ? RestClient.log = "#{@log_file_default}" : RestClient.log = "#{@log_file}"
 		end
 		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
-		
 		rescue => e
 		puts e.message	
+	end
+
+	def 	headers
+		@apiheader
 	end
 
 	def 	debugger
@@ -95,7 +94,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	show_all(obj)
-		@apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		reply = @apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		rescue => e
 		puts e.message
 	end
@@ -113,7 +115,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			show_all(obj)
 		else
 			req=@api[obj].to_s + "/#{id}"
-			@apiobject[req].get :x_api_version => "#{@api_version}"
+			reply = @apiobject[req].get :x_api_version => "#{@api_version}"
+			@apiheader = reply.headers
+			reply
 		end
 
 		rescue => e
@@ -122,7 +126,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def 	post_string(req, params)
-		@apiobject[req].post params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[req].post params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		puts params.inspect if @debug
 
 		rescue => e
@@ -130,7 +137,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	get_string(obj)
-		@apiobject[obj].get :x_api_version => "#{@api_version}"
+		reply = @apiobject[obj].get :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply	
 	
 		rescue => e
 		puts e.message
@@ -138,14 +147,18 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	delete_item(obj,id)
 		req=@api[obj].to_s + "/#{id}"
-		@apiobject[req].delete :x_api_version => "#{@api_version}"
+		reply = @apiobject[req].delete :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
 		
 		rescue => e	
 		puts e.message
 	end
 
 	def 	create_item(obj, params)
-		@apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+	        reply	
 		puts params.inspect if @debug
 		
 		rescue=> e
@@ -153,7 +166,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	update_item(obj, id, params)
-		@apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		reply = @apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply
+		
 		puts params.inpsect if @debug
 
 		rescue=> e
