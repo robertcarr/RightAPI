@@ -29,6 +29,7 @@ require 'rest_client'
 
 @apiobject = Object.new
 @apiheader = {}
+@resid
 
 attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
@@ -128,7 +129,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def 	post_string(req, params)
 		reply = @apiobject[req].post params, :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
-		reply
+		reply.headers[:location].match(/\d+$/)	
 		
 		puts params.inspect if @debug
 
@@ -158,13 +159,14 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def 	create_item(obj, params)
 		reply = @apiobject[@api[obj]].post params, :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
-	        reply	
+	       	@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
 		puts params.inspect if @debug
 		
 		rescue=> e
 		puts e.message
 	end
 
+		
 	def	update_item(obj, id, params)
 		reply = @apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
@@ -176,6 +178,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts e.message
 	end
 
+	def	resourceid
+		@resid
+	end
 	def	arrays_create(params)
 		create_item(:arrays, params)
 	end
