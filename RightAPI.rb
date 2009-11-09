@@ -26,10 +26,13 @@ require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
 class RightAPI
 require 'rest_client'
+require 'xmlsimple'
+
 
 @apiobject = Object.new
 @apiheader = {}
 @resid
+@xml
 
 attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
@@ -90,6 +93,16 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		@apiheader
 	end
 
+	def	resources
+		res_array = []
+		data = XmlSimple.xml_in(@xml.to_s)
+		key = data.keys[1]
+		data[data.keys[1]].each do | item |
+			res_array << item['href'].to_s.match(/\d+$/)
+		end
+		res_array
+	end
+
 	def 	debugger
 		caller[0][/`([^']*)'/, 1]
 	end
@@ -97,6 +110,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	def	show_all(obj)
 		reply = @apiobject[@api[obj]].get :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
+		@xml=reply
 		reply
 		
 		rescue => e
@@ -118,6 +132,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			req=@api[obj].to_s + "/#{id}"
 			reply = @apiobject[req].get :x_api_version => "#{@api_version}"
 			@apiheader = reply.headers
+			@xml=reply
 			reply
 		end
 
