@@ -63,7 +63,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 			:stopall		=> "stop_all",
 			:startall		=> "start_all",
 			:duplicate		=> "duplicate",
-			:runscript		=> "run_script"
+			:runscript		=> "run_script",
+			:state			=> "run_right_scripts",
+			:operational		=> "operational"
 		}
 
 	@api_version = '1.0' if @api_version == nil	# Change default API version
@@ -152,6 +154,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts e.message	
 	end
 
+	def	put_string(req,params) 
+		reply = @apiobject[req].put params, :x_api_version => "#{@api_version}"
+		@apiheader = reply.headers
+		reply.headers[:location].match(/\d+$/)
+	end
+
 	def	get_string(obj)
 		reply = @apiobject[obj].get :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
@@ -181,7 +189,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts e.message
 	end
 
-		
 	def	update_item(obj, id, params)
 		reply = @apiobject[obj + "/#{id}"].put params, :x_api_version => "#{@api_version}"
 		@apiheader = reply.headers
@@ -193,9 +200,24 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts e.message
 	end
 
+	def	send(string,type = "get", params = {})
+		api_version = { :x_api_version => "#{@api_version}" }
+		params.merge!(api_version)
+		puts @apiobject[string].send type.to_sym, params
+	end
+
+
+
 	def	resourceid
 		@resid
 	end
+
+	def 	instances_state(id, state)
+		params = {}
+		#put_string(makestring(:instances,id,:operational), params)
+		 put_string(makestring(:instances,id,:operational), params)
+	end
+
 	def	arrays_create(params)
 		create_item(:arrays, params)
 	end
