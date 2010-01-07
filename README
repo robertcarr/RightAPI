@@ -1,6 +1,8 @@
 RightAPI
 
-Goal: to create a usable Ruby wrapper around the RightScale API calls.
+RightAPI.rb is supposed to be a feature parity wrapper for the RightScale API.  It has become a bit too timeconsuming to keep it in-sync with the production API so I've ceased work on this.
 
-/working directory is for code in progress
+RightAPILite.rb
+A simple API wrapper that allows you to send/receive API calls easily.  You need to handle formatting the API string properly with object ID's & the proper resource but it should do the rest.
+
 
