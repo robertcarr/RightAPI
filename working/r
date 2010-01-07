@@ -1,5 +1,0 @@
-#!/usr/bin/ruby
-
-h = { :rob	=> "is_here" }
-
-puts h[:rob]
