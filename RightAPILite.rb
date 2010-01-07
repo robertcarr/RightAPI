@@ -67,7 +67,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def 	debugger
-		caller[0][/`([^']*)'/, 1]
+		caller[0][/'([^']*)'/, 1]
 	end
 
 		# A better way to handle api calls with fewer methods
