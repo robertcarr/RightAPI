@@ -1,8 +1,36 @@
-RightAPI
+Generic RightAPI Wrapper
+------------------------
 
-RightAPI.rb is supposed to be a feature parity wrapper for the RightScale API.  It has become a bit too timeconsuming to keep it in-sync with the production API so I've ceased work on this.
 
-RightAPILite.rb
+RightAPI.rb
 A simple API wrapper that allows you to send/receive API calls easily.  You need to handle formatting the API string properly with object ID's & the proper resource but it should do the rest.
+
+Requires rest_client Ruby gem available online.
+ 
+More details on the API calls can be found at:
+http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+
+
+
+# Example
+
+ api = RightAPI.new	
+ api.login(username, password, account)
+ 
+# Allows you to send API messages to RightScale in a standard format (see API reference)
+# http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+
+# api.send(API_STRING,REST_TYPE, PARAMS)
+# 	e.g.	API_STRING = "ec2_ssh_keys/1234"
+#		REST_TYPE = GET | PUT | POST | DELETE 		
+#		PARAMS = optional depending on call
+
+
+# Displays list of current servers
+puts api.send("servers")               
+
+# Creates a new deployment with the following parameters
+params = { 'deployment[nickname]' => 'my_deployment_name', 'deployment[description]' => 'my_description' }
+api.send("deployments","post",params)
 
 
