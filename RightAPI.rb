@@ -1,10 +1,11 @@
 #!/usr/bin/ruby
+#
 # Copyright 2009 RightScale, Inc.
 # http://www.rightscale.com
 # robert@rightscale.com
 #
 # Ruby API Wrapper for RightScale API functions
-# Class: RightAPILite
+# Class: RightAPI
 #
 # Allows easier access to the RightScale API within your own ruby code and
 # Has limited debugging & error handling at this point.
@@ -19,6 +20,7 @@
 # 
 # Allows you to send API messages to RightScale in a standard format (see API reference)
 # http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+#
 #
 # api.send(API_STRING,REST_TYPE, PARAMS)
 # 	e.g.	API_STRING = "ec2_ssh_keys/1234"

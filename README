@@ -3,13 +3,13 @@ Generic RightAPI Wrapper
 
 
 RightAPI.rb
+===========
 A simple API wrapper that allows you to send/receive API calls easily.  You need to handle formatting the API string properly with object ID's & the proper resource but it should do the rest.
 
 Requires rest_client Ruby gem available online.
  
 More details on the API calls can be found at:
 http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
-
 
 
 # Example
@@ -26,11 +26,10 @@ http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
 #		PARAMS = optional depending on call
 
 
-# Displays list of current servers
+# Displays list of servers in XML format.
 puts api.send("servers")               
 
 # Creates a new deployment with the following parameters
 params = { 'deployment[nickname]' => 'my_deployment_name', 'deployment[description]' => 'my_description' }
 api.send("deployments","post",params)
-
 
