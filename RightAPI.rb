@@ -21,6 +21,9 @@
 # Allows you to send API messages to RightScale in a standard format (see API reference)
 # http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
 #
+# resourceid returns id # of created object
+# headers returns hash of returned http headers
+# duration returns the time the api call took
 #
 # api.send(API_STRING,REST_TYPE, PARAMS)
 # 	e.g.	API_STRING = "ec2_ssh_keys/1234"
@@ -70,14 +73,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts "Error: #{e.message}"
 	end
 
-	def 	headers
-		@apiheader
-	end
-
-	def 	debugger
-		caller[0][/'([^']*)'/, 1]
-	end
-
 	def	send(apistring,type = "get", params = {})
 		api_version= { :x_api_version => "#{@api_version}" }
 	
@@ -90,7 +85,6 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		else 
 			reply = @apiobject[apistring].send(type.to_sym, params, api_version)
 		end
-
 		@callduration = Time.now - @callstart 
 
 		@apiheader = reply.headers
@@ -102,17 +96,25 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		puts "Error: #{$!}"	
 
 	end
-
+	
+	# Returns the resource id of the created object
 	def	resourceid
 		@resid
 	end
 
+	# Show existing api connection string
 	def 	show_connection
 		puts @apiobject.inspect
 	end
 
+	# Returns length of time api call took 
 	def	duration
 		puts @callduration
+	end
+
+	# returns hash of http headers returned
+	def 	headers
+		@apiheader
 	end
 	
 end
