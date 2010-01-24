@@ -81,16 +81,16 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	
 		@callstart = Time.now	
 		if params.empty?
-			reply = @apiobject[apistring].send(type.to_sym, api_version) 
+			@reply = @apiobject[apistring].send(type.to_sym, api_version) 
 		else 
-			reply = @apiobject[apistring].send(type.to_sym, params, api_version)
+			@reply = @apiobject[apistring].send(type.to_sym, params, api_version)
 		end
 		@callduration = Time.now - @callstart 
 
 		@apiheader = reply.headers
 		@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
-	
-		reply 	
+		
+		@reply 	
 
 		rescue
 		puts "Error: #{$!}"	
