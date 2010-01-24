@@ -2,7 +2,7 @@
 #
 # Copyright 2009 RightScale, Inc.
 # http://www.rightscale.com
-# robert@rightscale.com
+# <user>
 #
 # Ruby API Wrapper for RightScale API functions
 # Class: RightAPI
@@ -47,9 +47,9 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def initialize
 
-	@api_version = '1.0' if @api_version == nil	# Change default API version
+	@api_version = '1.0' if @api_version.nil? 	# Change default API version
 	@log_file_default = "rest.log"
-	@api_url = "https://my.rightscale.com/api/acct/" if @api_url == nil
+	@api_url = "https://my.rightscale.com/api/acct/" if @api_url.nil?
 
 	end
 	
@@ -78,21 +78,20 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		caller[0][/'([^']*)'/, 1]
 	end
 
-		# A better way to handle api calls with fewer methods
-		# Convert all the API calls later. 
-
 	def	send(apistring,type = "get", params = {})
 		api_version= { :x_api_version => "#{@api_version}" }
-
 	
 		raise "No API call given" if apistring.empty?
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
-		
+	
+		@callstart = Time.now	
 		if params.empty?
 			reply = @apiobject[apistring].send(type.to_sym, api_version) 
 		else 
 			reply = @apiobject[apistring].send(type.to_sym, params, api_version)
 		end
+
+		@callduration = Time.now - @callstart 
 
 		@apiheader = reply.headers
 		@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
@@ -110,6 +109,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def 	show_connection
 		puts @apiobject.inspect
+	end
+
+	def	duration
+		puts @callduration
 	end
 	
 end
