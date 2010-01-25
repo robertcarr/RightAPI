@@ -87,7 +87,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		end
 		@callduration = Time.now - @callstart 
 
-		@apiheader = reply.headers
+		@apiheader = @reply.headers
 		@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
 		
 		@reply 	
