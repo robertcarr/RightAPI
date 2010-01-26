@@ -1,35 +1,31 @@
-Generic RightAPI Wrapper
-------------------------
-
-
 RightAPI.rb
 ===========
-A simple API wrapper that allows you to send/receive API calls easily.  You need to handle formatting the API string properly with object ID's & the proper resource but it should do the rest.
+A generic API wrapper to interface with the RightScale Cloud Computing API.
+You need to handle formatting the API string properly with object ID's & the proper resource but it should do the rest.
 
-Requires rest_client Ruby gem available online.
+Requires rest_client Ruby gem available online. 'gem install rest-client'
  
 More details on the API calls can be found at:
 http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
 
-
-# Example
-
  api = RightAPI.new	
+ api.log = true
  api.login(username, password, account)
  
-# Allows you to send API messages to RightScale in a standard format (see API reference)
-# http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
+Allows you to send API messages to RightScale in a standard format (see API reference)
+http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
 
-# api.send(API_STRING,REST_TYPE, PARAMS)
-# 	e.g.	API_STRING = "ec2_ssh_keys/1234"
-#		REST_TYPE = GET | PUT | POST | DELETE 		
-#		PARAMS = optional depending on call
+ api.send(API_STRING,REST_TYPE, PARAMS)
+
+# e.g.	API_STRING = "ec2_ssh_keys/1234"
+#	REST_TYPE = GET | PUT | POST | DELETE 		
+#	PARAMS = optional depending on call
 
 
 # Displays list of servers in XML format.
 puts api.send("servers")               
 
-# Creates a new deployment with the following parameters
+# Create new deployment with the following parameters
 params = { 'deployment[nickname]' => 'my_deployment_name', 'deployment[description]' => 'my_description' }
 api.send("deployments","post",params)
 
