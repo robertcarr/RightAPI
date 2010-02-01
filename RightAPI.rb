@@ -80,12 +80,12 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
 	
 		@callstart = Time.now	
-		if params.empty?
+		if params.empty? && type.match(/get/)
 			@reply = @apiobject[apistring].send(type.to_sym, api_version) 
 		else 
 			@reply = @apiobject[apistring].send(type.to_sym, params, api_version)
 		end
-		@callduration = Time.now - @callstart 
+		@time = Time.now - @callstart 
 
 		@apiheader = @reply.headers
 		@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
@@ -108,8 +108,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	# Returns length of time api call took 
-	def	duration
-		puts @callduration
+	def	time
+		puts @time
 	end
 
 	# returns hash of http headers returned
