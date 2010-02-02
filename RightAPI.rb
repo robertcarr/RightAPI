@@ -117,4 +117,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		@apiheader
 	end
 	
+ 	# Return xml of matching names
+	def	search(name="")
+		puts self.send("servers?filter=nickname=#{name}")
+	end
 end
