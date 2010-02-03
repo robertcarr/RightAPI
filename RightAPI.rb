@@ -74,6 +74,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	end
 
 	def	send(apistring,type = "get", params = {})
+		@responsecode = ""
 		api_version= { :x_api_version => "#{@api_version}" }
 	
 		raise "No API call given" if apistring.empty?
@@ -93,6 +94,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		@reply 	
 
 		rescue
+		@responsecode = $!
 		puts "Error: #{$!}"	
 
 	end
@@ -119,6 +121,10 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 	
  	# Return xml of matching names
 	def	search(name="")
-		puts self.send("servers?filter=nickname=#{name}")
+		self.send("servers?filter=nickname=#{name}")
 	end
+
+	def	code
+		@responsecode
+	end	
 end
