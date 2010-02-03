@@ -80,7 +80,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
 	
 		@callstart = Time.now	
-		if params.empty? && type.match(/get/)
+		if params.empty? && type.match(/(get|delete)/)
 			@reply = @apiobject[apistring].send(type.to_sym, api_version) 
 		else 
 			@reply = @apiobject[apistring].send(type.to_sym, params, api_version)
