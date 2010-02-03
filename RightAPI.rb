@@ -109,7 +109,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	# Returns length of time api call took 
 	def	time
-		puts @time
+		@time.to_f
 	end
 
 	# returns hash of http headers returned
