@@ -75,8 +75,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 	def	send(apistring,type = "get", params = {})
 		@responsecode = ""
-		api_version= { :x_api_version => "#{@api_version}" }
-	
+		api_version= { :x_api_version => "#{@api_version}", :api_version => "#{@api_version}" }	
+
 		raise "No API call given" if apistring.empty?
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
 	
