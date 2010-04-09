@@ -40,13 +40,16 @@
 require 'rubygems'  if VERSION < "1.9.0"  # not required if ruby >= 1.9
 
 class RightAPI
+	
 require 'rest_client'
 
 @apiobject = Object.new
 @apiheader = {}
 @resid
+@puts_exceptions = true
+@reraise_exceptions = false
 
-attr_accessor :api_version, :log, :debug, :api_url, :log_file
+attr_accessor :api_version, :log, :debug, :api_url, :log_file, :puts_exceptions, :reraise_exceptions
 
 	def initialize
 
@@ -70,7 +73,8 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 		end
 		@apiobject = RestClient::Resource.new("#{@api_call}",@username,@password)
 		rescue => e
-		puts "Error: #{e.message}"
+		puts "Error: #{e.message}" if @puts_exceptions
+		raise if @reraise_exceptions
 	end
 
 	def	send(apistring,type = "get", params = {})
@@ -95,10 +99,11 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file
 
 		rescue
 		@responsecode = $!
-		puts "Error: #{$!}"	
+		puts "Error: #{$!}"	if @puts_exceptions
+		raise if @reraise_exceptions
 
 	end
-	
+
 	# Returns the resource id of the created object
 	def	resourceid
 		@resid
