@@ -59,12 +59,13 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file, :puts_exceptions,
 
 	end
 	
-	def	login(username, password, account) 
+	def	login(opts={})
 		puts "Debug mode on\n\n" if @debug
 		
-		@username = username
-		@password = password
-		@account = account
+		@username = opts[:username]
+		@password = opts[:password]
+		@account =  opts[:account] 
+
 		@api_call = "#{@api_url}#{@account}"
 		unless @log.nil?
 			puts "logging=#{@log}" if @debug
