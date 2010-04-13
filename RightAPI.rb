@@ -16,7 +16,7 @@
 # Example:
 # api = RightAPI.new	
 # api.log = true
-# api.login(username, password, account)
+# api.login(:username => 'user', :password => 'pass', :account => '1234')
 # 
 # Allows you to send API messages to RightScale in a standard format (see API reference)
 # http://support.rightscale.com/15-References/RightScale_API_Reference_Guide
@@ -86,11 +86,7 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file, :puts_exceptions,
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
 	
 		@callstart = Time.now	
-		if params.empty? && type.match(/(get|delete)/)
-			@reply = @apiobject[apistring].send(type.to_sym, api_version) 
-		else 
-			@reply = @apiobject[apistring].send(type.to_sym, params, api_version)
-		end
+    @reply = @apiobject[apistring].send(type.to_sym, api_version.merge(params)) 
 		@time = Time.now - @callstart 
 
 		@apiheader = @reply.headers
