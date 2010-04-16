@@ -86,13 +86,14 @@ attr_accessor :api_version, :log, :debug, :api_url, :log_file, :puts_exceptions,
 		raise "Invalid Action: get | put | post | delete only" unless type.match(/(get|post|put|delete)/)
 	
 		@callstart = Time.now	
-    @reply = @apiobject[apistring].send(type.to_sym, api_version.merge(params)) 
+    		@reply = @apiobject[apistring].send(type.to_sym, api_version.merge(params)) 
 		@time = Time.now - @callstart 
 
 		@apiheader = @reply.headers
 		@resid = @apiheader[:location].match(/\d+$/) if @apiheader[:status].downcase.match(/201 created/)
-		
-		@reply 	
+	
+		# Return results	
+		@reply.body
 
 		rescue
 		@responsecode = $!
