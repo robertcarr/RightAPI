@@ -5,5 +5,5 @@ Gem::Specification.new do |s|
   s.authors = ["Robert Carr"]
   s.email = "robert@rightscale.com"
   s.summary = "Ruby wrapper around rightscales rest interface"
-  s.files = ["lib/RightAPI.rb"]
+  s.files = ["lib/right-api.rb"]
 end
